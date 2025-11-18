@@ -2438,5 +2438,3 @@ scale = Vector2(0.529611, 0.51041)
 z_index = 6
 position = Vector2(453, 1346)
 scale = Vector2(0.48, 0.52)
-
-[node name="DoorExit" type="Marker2D" parent="."]
