@@ -2341,11 +2341,13 @@ texture = ExtResource("8_c32x4")
 [sub_resource type="TileSet" id="TileSet_epypp"]
 sources/0 = SubResource("TileSetAtlasSource_0e48y")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
+scale = Vector2(1.00188, 1.0007)
 
 [node name="player" parent="." instance=ExtResource("1_4d7sh")]
-z_index = 5
-position = Vector2(168, 2425)
+z_index = 20
+position = Vector2(250.529, 2430.29)
+scale = Vector2(1.07685, 0.873623)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 

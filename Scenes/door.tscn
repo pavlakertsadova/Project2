@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw6a5u644y378"]
+
+[ext_resource type="Script" uid="uid://b5trwnevwb0aw" path="res://Script/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="1_w6aom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0e35"]
+atlas = ExtResource("1_w6aom")
+region = Rect2(0, 85, 85, 85)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fahql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0e35")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ab4ky"]
+radius = 23.0
+height = 66.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_p0e35")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -5)
+scale = Vector2(1.23408, 1.18614)
+sprite_frames = SubResource("SpriteFrames_fahql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -4)
+shape = SubResource("CapsuleShape2D_ab4ky")
