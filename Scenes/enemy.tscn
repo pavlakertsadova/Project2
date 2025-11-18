@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://crh8iwq2ldlml"]
 
-[ext_resource type="Script" uid="uid://cvajp1fifano4" path="res://Scenes/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://cvajp1fifano4" path="res://Script/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://bhwt1kiot67a3" path="res://Assets/elements-supremacy-spritesheets/spaghetti_atlas.png" id="1_hghv2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f0kj"]
