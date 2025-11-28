@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://Scenes/enemy.tscn" id="10_hvaui"]
 [ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://Scenes/sprite_2d.gd" id="10_p20hg"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_he4j0"]
+radius = 23.8139
+height = 65.6177
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8dv2"]
 texture = ExtResource("1_v7gqg")
 0:0/0 = 0
@@ -2342,15 +2346,26 @@ texture = ExtResource("8_c32x4")
 [sub_resource type="TileSet" id="TileSet_epypp"]
 sources/0 = SubResource("TileSetAtlasSource_0e48y")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_he4j0"]
-radius = 23.8139
-height = 65.6177
-
 [node name="Node2D2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(170, 2390)
+scale = Vector2(1.34375, 1.43254)
+texture = ExtResource("5_p20hg")
+region_enabled = true
+region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
+script = ExtResource("10_p20hg")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(1.48837, 4.18836)
+shape = SubResource("CapsuleShape2D_he4j0")
 
 [node name="player" parent="." instance=ExtResource("1_4d7sh")]
 z_index = 20
-position = Vector2(250.529, 2430.29)
+position = Vector2(99, 2467)
 scale = Vector2(1.07685, 0.873623)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -2420,19 +2435,6 @@ scale = Vector2(0.91781, 0.890174)
 texture = ExtResource("5_p20hg")
 region_enabled = true
 region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/Door"]
-position = Vector2(-78.1395, 1032.52)
-texture = ExtResource("5_p20hg")
-region_enabled = true
-region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
-script = ExtResource("10_p20hg")
-
-[node name="Area2D" type="Area2D" parent="TileMap/Door/Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Door/Sprite2D/Area2D"]
-position = Vector2(1.48837, 4.18836)
-shape = SubResource("CapsuleShape2D_he4j0")
 
 [node name="Sprite2D6" type="Sprite2D" parent="TileMap/Door"]
 position = Vector2(178.605, 217.184)

@@ -9,6 +9,9 @@ enum Direction {NONE, UP, DOWN, RIGHT, LEFT}
 var facing_direction = Direction.NONE
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+func _ready():
+	add_to_group("player")  # Добавяме играча в група "player"
+	print("Играчът е зареден и добавен в група 'player'")
 
 func _physics_process(_delta: float) -> void:
 	if not can_move:  # <-- ДОБАВЕНО
