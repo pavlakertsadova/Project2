@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name Player
+
 const SPEED = 100.0
 var last_direction := Vector2(1,0)
 var input = Vector2.ZERO

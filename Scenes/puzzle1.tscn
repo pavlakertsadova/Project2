@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://ccn6d6krdg1tn"]
+[gd_scene load_steps=19 format=4 uid="uid://ccn6d6krdg1tn"]
 
-[ext_resource type="Script" uid="uid://d1d35p7c4xdpw" path="res://Script/puzzle_1.gd" id="1_aan77"]
+[ext_resource type="Script" uid="uid://d1d35p7c4xdpw" path="res://script/puzzle_1.gd" id="1_aan77"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_d7vh0"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_voev6"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="4_j46pd"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_mjqgh"]
+[ext_resource type="Script" uid="uid://smw55y8cml7m" path="res://scenes/riddle_1.gd" id="6_voev6"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_j46pd"]
+[ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_mjqgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfoye"]
 texture = ExtResource("4_j46pd")
@@ -1317,6 +1320,16 @@ texture = ExtResource("5_mjqgh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_683ma")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7vh0"]
+size = Vector2(26, 17)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4bn3"]
+line_spacing = 1.0
+font = ExtResource("7_mjqgh")
+font_size = 8
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="puzzle1" type="Node2D"]
 script = ExtResource("1_aan77")
 
@@ -1338,3 +1351,30 @@ tile_set = SubResource("TileSet_shtpt")
 
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(16, -116)
+
+[node name="Riddle1" type="Sprite2D" parent="."]
+script = ExtResource("6_voev6")
+
+[node name="Area2D" type="Area2D" parent="Riddle1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Riddle1/Area2D"]
+position = Vector2(97, 48.5)
+shape = SubResource("RectangleShape2D_d7vh0")
+
+[node name="Label" type="Label" parent="Riddle1"]
+z_index = 50
+offset_left = 37.0
+offset_top = -50.0
+offset_right = 158.0
+offset_bottom = -24.0
+text = "Only the plate that faces the liar is safe to stand upon."
+label_settings = SubResource("LabelSettings_b4bn3")
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="player" parent="." instance=ExtResource("7_j46pd")]
+position = Vector2(13, -54)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(3, 3)
