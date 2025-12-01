@@ -15,6 +15,10 @@ run/main_scene="uid://bh7nudw6bjfgl"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Puzzle1Answer="*res://puzzle1_script/puzzle1_answer.gd"
+
 [input]
 
 move_left={

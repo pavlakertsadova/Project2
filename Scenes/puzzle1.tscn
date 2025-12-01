@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://ccn6d6krdg1tn"]
+[gd_scene load_steps=29 format=4 uid="uid://ccn6d6krdg1tn"]
 
 [ext_resource type="Script" uid="uid://d1d35p7c4xdpw" path="res://puzzle1_script/riddle_manager.gd" id="1_aan77"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_d7vh0"]
@@ -6,12 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="4_j46pd"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_mjqgh"]
 [ext_resource type="Script" uid="uid://smw55y8cml7m" path="res://puzzle1_script/riddle_1.gd" id="6_voev6"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_j46pd"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_j46pd"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_mjqgh"]
 [ext_resource type="Script" uid="uid://cmr7ox46sdu3r" path="res://puzzle1_script/north.gd" id="9_b4bn3"]
 [ext_resource type="Script" uid="uid://c15oriakiu5jk" path="res://puzzle1_script/south.gd" id="10_rih6e"]
 [ext_resource type="Script" uid="uid://blvg4gxq6wfql" path="res://puzzle1_script/east.gd" id="11_8jut7"]
 [ext_resource type="Script" uid="uid://bu50lswt3oayr" path="res://puzzle1_script/west.gd" id="11_eso5p"]
+[ext_resource type="Script" uid="uid://3af4jlr4x62n" path="res://puzzle1_script/answer.gd" id="12_lfoye"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfoye"]
 texture = ExtResource("4_j46pd")
@@ -1351,6 +1352,9 @@ size = Vector2(14, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jut7"]
 size = Vector2(14, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eso5p"]
+size = Vector2(39, 56)
+
 [node name="puzzle1" type="Node2D"]
 script = ExtResource("1_aan77")
 
@@ -1427,6 +1431,15 @@ script = ExtResource("11_8jut7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="East/Area2D"]
 position = Vector2(134, 46)
 shape = SubResource("RectangleShape2D_8jut7")
+
+[node name="Answer" type="Sprite2D" parent="."]
+script = ExtResource("12_lfoye")
+
+[node name="Area2D" type="Area2D" parent="Answer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer/Area2D"]
+position = Vector2(-48.5, 35)
+shape = SubResource("RectangleShape2D_eso5p")
 
 [node name="player" parent="." instance=ExtResource("7_j46pd")]
 position = Vector2(13, -54)

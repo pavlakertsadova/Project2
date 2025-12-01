@@ -24,5 +24,6 @@ func _input(event):
 func interact():
 	if is_correct_plate:
 		print("Correct plate chosen!")
+		Puzzle1Answer.puzzle_solved = true 
 	else:
 		print("Wrong plate (but doing nothing).")
