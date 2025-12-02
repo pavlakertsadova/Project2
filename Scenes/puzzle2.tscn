@@ -1521,7 +1521,7 @@ offset_left = -141.177
 offset_top = -114.706
 offset_right = 158.823
 offset_bottom = -91.7059
-text = "Go to the chest"
+text = "Find the chest"
 autowrap_mode = 2
 
 [node name="chestTrigger" type="Area2D" parent="."]

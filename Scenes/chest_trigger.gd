@@ -1,7 +1,7 @@
 extends Area2D
 
 # Текстът на гатанката
-var riddle_text = "I am a throne, yet not for kings, but for travelers.\nHeavy as stone, but my comfort is light.\nFind rest upon me, and the way shall open."
+var riddle_text = "Find this subject: I am a throne, yet not for kings, but for travelers.\nHeavy as stone, but my comfort is light.\nFind rest upon me, and the way shall open."
 
 func _on_body_entered(body):
 	# Проверяваме дали влязлото тяло е играчът
