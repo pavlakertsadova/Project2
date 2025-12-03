@@ -6,7 +6,14 @@ const SAVE_PATH = "user://savegame.save"
 # Речникът с прогреса на вратите
 var level_progress = {
 	"puzzle1": false,
-	"puzzle2": false
+	"puzzle2": false,
+	"puzzle3": false,
+	"puzzle4": false,
+	"puzzle5": false,
+	"puzzle6": false,
+	"puzzle7": false,
+	"puzzle8": false,
+	"puzzle9": false
 }
 
 # Променлива, която помни последния решен пъзел
