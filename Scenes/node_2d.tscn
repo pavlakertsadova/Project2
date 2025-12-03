@@ -2411,8 +2411,8 @@ script = ExtResource("1_he4j0")
 
 [node name="player" parent="." instance=ExtResource("1_4d7sh")]
 z_index = 20
-position = Vector2(162, 2473)
-scale = Vector2(1.07685, 0.873623)
+position = Vector2(166, 2500)
+scale = Vector2(1.07685, 1.24997)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-0.491254, 9.96993)
@@ -2457,7 +2457,7 @@ tile_map_data = PackedByteArray("AAALAAwAAAAWAAsAAAAMAAwAAAAXAAsAAAANAA0AAAAYAAw
 tile_set = SubResource("TileSet_epypp")
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("player", "closed_doors", "open_doors") instance=ExtResource("15_c32x4")]
-position = Vector2(-302, -218)
+position = Vector2(-302, -219)
 player = NodePath("../player")
 closed_doors = [NodePath("../closedDoors/door1"), NodePath("../closedDoors/door2"), NodePath("../closedDoors/door3"), NodePath("../closedDoors/door4"), NodePath("../closedDoors/door5"), NodePath("../closedDoors/door6"), NodePath("../closedDoors/door7"), NodePath("../closedDoors/door8"), NodePath("../closedDoors/door9")]
 open_doors = [NodePath("../openDoors/openDoor1"), NodePath("../openDoors/openDoor2"), NodePath("../openDoors/openDoor3"), NodePath("../openDoors/openDoor4"), NodePath("../openDoors/openDoor5"), NodePath("../openDoors/openDoor6"), NodePath("../openDoors/openDoor7"), NodePath("../openDoors/openDoor8"), NodePath("../openDoors/openDoor9")]

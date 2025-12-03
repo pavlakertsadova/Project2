@@ -19,6 +19,8 @@ var level_progress = {
 # Променлива, която помни последния решен пъзел
 var last_solved_puzzle = "" 
 
+var dir = DirAccess.open("user://")
+
 # --- ФУНКЦИЯ ЗА ЗАПИСВАНЕ ---
 func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)

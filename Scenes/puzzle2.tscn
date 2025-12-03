@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://v8j1bfp7kate"]
+[gd_scene load_steps=23 format=4 uid="uid://v8j1bfp7kate"]
 
 [ext_resource type="Script" uid="uid://e51vavaulq2v" path="res://Script/puzzle_2.gd" id="1_3lbq2"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="2_p66xg"]
@@ -1477,6 +1477,10 @@ texture = ExtResource("5_i1xga")
 [sub_resource type="TileSet" id="TileSet_ufuhr"]
 sources/0 = SubResource("TileSetAtlasSource_wvpun")
 
+[sub_resource type="LabelSettings" id="LabelSettings_7cckq"]
+outline_size = 4
+outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p66xg"]
 size = Vector2(31, 31)
 
@@ -1522,6 +1526,7 @@ offset_top = -114.706
 offset_right = 158.823
 offset_bottom = -91.7059
 text = "Find the chest"
+label_settings = SubResource("LabelSettings_7cckq")
 autowrap_mode = 2
 
 [node name="chestTrigger" type="Area2D" parent="."]
