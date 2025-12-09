@@ -1,36 +1,44 @@
 extends Area2D
 
-# Тази променлива ще я цъкаме в Инспектора само за верния отговор
 @export var is_correct_answer = false
-
-# Дали паметникът е "събуден"
 var is_active = false
 
 func _ready():
-	# Уверяваме се, че етикетът е скрит в началото
-	$Label.visible = false
+	# Скриваме етикета (A, B, C, D) при старт
+	if has_node("Label"):
+		$Label.visible = false
 
-# Тази функция ще я извика Главният гроб
+# Тази функция се вика от Гроба
 func activate_stone():
+	print("Паметникът ", name, " е активиран!")
 	is_active = true
-	$Label.visible = true # Показваме текста
+	
+	# Показваме етикета с отговора
+	var label = get_node_or_null("Label")
+	if label:
+		label.visible = true
 
 func _on_body_entered(body):
-	# Реагираме САМО ако е активен и влиза играчът
-	if is_active and body.name == "player":
+	# Ако не е активен, игнорираме
+	if is_active == false:
+		return
+
+	# Проверка дали е играч
+	if body.name == "player" or body.is_in_group("player"):
+		print("Играчът стъпи върху отговор: ", name)
+		
 		if is_correct_answer:
-			print("Верен отговор!")
-			
-			# --- ЗАПИСВАНЕ НА ПРОГРЕСА (PUZZLE 4) ---
+			print("ВЕРЕН ОТГОВОР!")
+			# Запазваме прогреса
 			Global.level_progress["puzzle4"] = true
 			Global.last_solved_puzzle = "puzzle4"
 			Global.save_game()
-			
-			call_deferred("change_scene")
+			# Връщаме се в лабиринта
+			call_deferred("go_home")
 		else:
-			print("Грешен отговор!")
-			# Тук можеш да накажеш героя (да го върнеш назад)
-			body.position = Vector2(100, 300) # Сложи координатите на старта
+			print("ГРЕШЕН ОТГОВОР!")
+			# Връщаме героя леко назад към входа на стаята
+			body.position = Vector2(100, 300) 
 
-func change_scene():
+func go_home():
 	get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")

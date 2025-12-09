@@ -2416,6 +2416,7 @@ scale = Vector2(1.07685, 0.873623)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-0.491254, 9.96993)
+zoom = Vector2(3, 3)
 
 [node name="TileMap" type="Node" parent="."]
 
