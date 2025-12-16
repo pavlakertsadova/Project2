@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://ccn6d6krdg1tn"]
+[gd_scene load_steps=45 format=4 uid="uid://ccn6d6krdg1tn"]
 
 [ext_resource type="Script" uid="uid://d1d35p7c4xdpw" path="res://puzzle1_script/riddle_manager.gd" id="1_aan77"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_d7vh0"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="4_j46pd"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_mjqgh"]
 [ext_resource type="Script" uid="uid://smw55y8cml7m" path="res://puzzle1_script/riddle_1.gd" id="6_voev6"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_j46pd"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_j46pd"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_mjqgh"]
 [ext_resource type="Script" uid="uid://cmr7ox46sdu3r" path="res://puzzle1_script/north.gd" id="9_b4bn3"]
 [ext_resource type="Script" uid="uid://c15oriakiu5jk" path="res://puzzle1_script/south.gd" id="10_rih6e"]
 [ext_resource type="Script" uid="uid://blvg4gxq6wfql" path="res://puzzle1_script/east.gd" id="11_8jut7"]
 [ext_resource type="Script" uid="uid://bu50lswt3oayr" path="res://puzzle1_script/west.gd" id="11_eso5p"]
 [ext_resource type="Script" uid="uid://3af4jlr4x62n" path="res://puzzle1_script/answer.gd" id="12_lfoye"]
+[ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="14_2kv06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfoye"]
 texture = ExtResource("4_j46pd")
@@ -1340,6 +1341,182 @@ shadow_size = 2
 shadow_color = Color(0.231373, 0.231373, 0.231373, 1)
 shadow_offset = Vector2(1.5, 1.5)
 
+[sub_resource type="LabelSettings" id="LabelSettings_lfoye"]
+line_spacing = 1.0
+paragraph_spacing = 55.0
+font = ExtResource("14_2kv06")
+font_size = 6
+font_color = Color(0.568627, 1, 1, 1)
+outline_size = 1
+outline_color = Color(1, 1, 1, 0.27451)
+shadow_color = Color(0, 0.745098, 0.894118, 0.917647)
+
+[sub_resource type="Animation" id="Animation_683ma"]
+resource_name = "blinking"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_shtpt"]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2kv06"]
+resource_name = "blink_answers"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p8d8c"]
+resource_name = "blinking_red"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2kv06"]
+_data = {
+&"RESET": SubResource("Animation_shtpt"),
+&"blink_answers": SubResource("Animation_2kv06"),
+&"blinking": SubResource("Animation_683ma"),
+&"blinking_red": SubResource("Animation_p8d8c")
+}
+
+[sub_resource type="Animation" id="Animation_f6mps"]
+resource_name = "blinking_red"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_shtpt"]
+_data = {
+&"RESET": SubResource("Animation_shtpt"),
+&"blink_answers": SubResource("Animation_2kv06"),
+&"blinking": SubResource("Animation_683ma"),
+&"blinking_red": SubResource("Animation_f6mps")
+}
+
+[sub_resource type="Animation" id="Animation_dxbwv"]
+resource_name = "blinking_red"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p8d8c"]
+_data = {
+&"RESET": SubResource("Animation_shtpt"),
+&"blink_answers": SubResource("Animation_2kv06"),
+&"blinking": SubResource("Animation_683ma"),
+&"blinking_red": SubResource("Animation_dxbwv")
+}
+
+[sub_resource type="Animation" id="Animation_bpvkl"]
+resource_name = "blinking_red"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f6mps"]
+_data = {
+&"RESET": SubResource("Animation_shtpt"),
+&"blink_answers": SubResource("Animation_2kv06"),
+&"blinking": SubResource("Animation_683ma"),
+&"blinking_red": SubResource("Animation_bpvkl")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_683ma"]
+line_spacing = 1.0
+font = ExtResource("7_mjqgh")
+font_size = 8
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.203922)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjqgh"]
 size = Vector2(18, 11)
 
@@ -1355,6 +1532,22 @@ size = Vector2(14, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eso5p"]
 size = Vector2(39, 56)
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_683ma"]
+_data = {
+&"RESET": SubResource("Animation_shtpt"),
+&"blink_answers": SubResource("Animation_2kv06"),
+&"blinking": SubResource("Animation_683ma")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_2kv06"]
+line_spacing = 1.0
+paragraph_spacing = 55.0
+font = ExtResource("7_mjqgh")
+font_size = 8
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.52549)
+
 [node name="puzzle1" type="Node2D"]
 script = ExtResource("1_aan77")
 
@@ -1363,7 +1556,7 @@ tile_map_data = PackedByteArray("AAAJAAYAAAAFAAYAAAAJAAcAAAAFAAcAAAAJAAgAAAAHAAI
 tile_set = SubResource("TileSet_2kv06")
 
 [node name="wall" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD6//T/AAACAAwAAAD6//X/AAACAA0AAAD6//b/AAACAA4AAAD6//f/AAACAA8AAAD7//T/AAADAAwAAAD7//X/AAADAA0AAAD7//b/AAADAA4AAAD7//f/AAADAA8AAAD8//T/AAAEAAwAAAD8//X/AAAEAA0AAAD8//b/AAAEAA4AAAD8//f/AAAEAA8AAAD9//T/AAAFAAwAAAD9//X/AAAFAA0AAAD9//b/AAAFAA4AAAD9//f/AAAFAA8AAAD+//T/AAAGAAwAAAD+//f/AAAGAA8AAAD///T/AAAHAAwAAAD///f/AAAHAA8AAAAAAPT/AAAIAAwAAAAAAPX/AAAIAA0AAAAAAPb/AAAIAA4AAAAAAPf/AAAIAA8AAAABAPT/AAAJAAwAAAABAPX/AAAJAA0AAAABAPb/AAAJAA4AAAABAPf/AAAJAA8AAAACAPT/AAACAAwAAAACAPX/AAACAA0AAAACAPb/AAACAA4AAAACAPf/AAACAA8AAAADAPT/AAADAAwAAAADAPX/AAADAA0AAAADAPb/AAADAA4AAAADAPf/AAADAA8AAAAEAPT/AAAEAAwAAAAEAPX/AAAEAA0AAAAEAPb/AAAEAA4AAAAEAPf/AAAEAA8AAAAFAPT/AAAFAAwAAAAFAPX/AAAFAA0AAAAFAPb/AAAFAA4AAAAFAPf/AAAFAA8AAAAGAPT/AAAGAAwAAAAGAPX/AAAGAA0AAAAGAPb/AAAGAA4AAAAGAPf/AAAGAA8AAAAHAPT/AAAHAAwAAAAHAPX/AAAHAA0AAAAHAPb/AAAHAA4AAAAHAPf/AAAHAA8AAAAIAPT/AAAIAAwAAAAIAPX/AAAIAA0AAAAIAPb/AAAIAA4AAAAIAPf/AAAIAA8AAAAJAPT/AAAJAAwAAAAJAPX/AAAJAA0AAAAJAPb/AAAJAA4AAAAJAPf/AAAJAA8AAAAKAPT/AAACAAwAAAAKAPX/AAACAA0AAAAKAPb/AAACAA4AAAAKAPf/AAACAA8AAAALAPT/AAADAAwAAAALAPX/AAADAA0AAAALAPb/AAADAA4AAAALAPf/AAADAA8AAAAMAPT/AAAEAAwAAAAMAPX/AAAMAA0AAAAMAPb/AAAMAA4AAAAMAPf/AAAEAA8AAAANAPT/AAAFAAwAAAANAPX/AAANAA0AAAANAPb/AAANAA4AAAANAPf/AAAFAA8AAAAOAPT/AAAGAAwAAAAOAPX/AAAGAA0AAAAOAPb/AAAGAA4AAAAOAPf/AAAGAA8AAAAPAPT/AAAHAAwAAAAPAPX/AAAHAA0AAAAPAPb/AAAHAA4AAAAPAPf/AAAHAA8AAAAQAPT/AAAIAAwAAAAQAPX/AAAIAA0AAAAQAPb/AAAIAA4AAAAQAPf/AAAIAA8AAAARAPT/AAAJAAwAAAARAPX/AAAJAA0AAAARAPb/AAAJAA4AAAARAPf/AAAJAA8AAAAMAA4AAAAKAAgAAAANAA4AAAALAAgAAAAOAA4AAAAMAAgAAAAPAA4AAAANAAgAAAAQAA4AAAAOAAgAAAARAA4AAAAPAAgAAAAGAA4AAAAPAAgAAAAHAA4AAAALAAgAAAAIAA4AAAAMAAgAAAAJAA4AAAANAAgAAAAKAA4AAAAOAAgAAAALAA4AAAAPAAgAAAABAA4AAAAKAAgAAAACAA4AAAALAAgAAAADAA4AAAAMAAgAAAAEAA4AAAANAAgAAAAFAA4AAAAOAAgAAAD7/w4AAAALAAgAAAD8/w4AAAAMAAgAAAD9/w4AAAANAAgAAAD+/w4AAAAOAAgAAAD//w4AAAAPAAgAAAAAAA4AAAAPAAgAAAD6/w4AAAAKAAgAAAASAAgAAAASAAIAAAASAAkAAAASAAMAAAASAAoAAAASAAQAAAASAAsAAAASAAUAAAASAAwAAAASAAYAAAASAA0AAAASAAcAAAASAAIAAAASAAIAAAASAAMAAAASAAMAAAASAAQAAAASAAQAAAASAAUAAAASAAUAAAASAAYAAAASAAYAAAASAAcAAAASAAcAAAASAPz/AAASAAIAAAASAP3/AAASAAMAAAASAP7/AAASAAQAAAASAP//AAASAAUAAAASAAAAAAASAAYAAAASAAEAAAASAAcAAAASAPb/AAASAAIAAAASAPf/AAASAAMAAAASAPj/AAASAAQAAAASAPn/AAASAAUAAAASAPr/AAASAAYAAAASAPv/AAASAAcAAAASAPT/AAAQAAIAAAASAPX/AAAQAAMAAAD5//T/AAAJAAIAAAD5//X/AAAJAAMAAAASAA4AAAAQAAgAAAD5/w4AAAAJAAgAAAD5/wgAAAAVAAcAAAD5/wkAAAAVAAMAAAD5/woAAAAVAAQAAAD5/wsAAAAVAAUAAAD5/wwAAAAVAAYAAAD5/w0AAAAVAAcAAAD5/wMAAAAVAAIAAAD5/wQAAAAVAAMAAAD5/wUAAAAVAAQAAAD5/wYAAAAVAAUAAAD5/wcAAAAVAAYAAAD5//3/AAAVAAIAAAD5//7/AAAVAAMAAAD5////AAAVAAQAAAD5/wAAAAAVAAUAAAD5/wEAAAAVAAYAAAD5/wIAAAAVAAcAAAD5//f/AAAVAAIAAAD5//j/AAAVAAMAAAD5//n/AAAVAAQAAAD5//r/AAAVAAUAAAD5//v/AAAVAAYAAAD5//z/AAAVAAcAAAD5//b/AAAVAAUAAAD+//X/AAAMAA0AAAD+//b/AAAMAA4AAAD///X/AAANAA0AAAD///b/AAANAA4AAAA=")
+tile_map_data = PackedByteArray("AAD6//T/AAACAAwAAAD6//X/AAACAA0AAAD6//b/AAACAA4AAAD6//f/AAACAA8AAAD7//T/AAADAAwAAAD7//X/AAADAA0AAAD7//b/AAADAA4AAAD7//f/AAACAAYAAAD8//T/AAAEAAwAAAD8//X/AAAEAA0AAAD8//b/AAAEAA4AAAD8//f/AAAHAAYAAAD9//T/AAAFAAwAAAD9//X/AAAFAA0AAAD9//b/AAAFAA4AAAD9//f/AAAFAA8AAAD+//T/AAAGAAwAAAD+//f/AAAGAA8AAAD///T/AAAHAAwAAAD///f/AAAHAA8AAAAAAPT/AAAIAAwAAAAAAPX/AAAIAA0AAAAAAPb/AAAIAA4AAAAAAPf/AAAIAA8AAAABAPT/AAAJAAwAAAABAPX/AAAJAA0AAAABAPb/AAAJAA4AAAABAPf/AAAJAA8AAAACAPT/AAACAAwAAAACAPX/AAACAA0AAAACAPb/AAACAA4AAAACAPf/AAACAA8AAAADAPT/AAADAAwAAAADAPX/AAADAA0AAAADAPb/AAADAA4AAAADAPf/AAADAA8AAAAEAPT/AAAEAAwAAAAEAPX/AAAEAA0AAAAEAPb/AAAEAA4AAAAEAPf/AAAEAA8AAAAFAPT/AAAFAAwAAAAFAPX/AAAFAA0AAAAFAPb/AAAFAA4AAAAFAPf/AAAFAA8AAAAGAPT/AAAGAAwAAAAGAPX/AAAGAA0AAAAGAPb/AAAGAA4AAAAGAPf/AAAGAA8AAAAHAPT/AAAHAAwAAAAHAPX/AAAHAA0AAAAHAPb/AAAHAA4AAAAHAPf/AAAHAA8AAAAIAPT/AAAIAAwAAAAIAPX/AAAIAA0AAAAIAPb/AAAIAA4AAAAIAPf/AAAIAA8AAAAJAPT/AAAJAAwAAAAJAPX/AAAJAA0AAAAJAPb/AAAJAA4AAAAJAPf/AAAJAA8AAAAKAPT/AAACAAwAAAAKAPX/AAACAA0AAAAKAPb/AAACAA4AAAAKAPf/AAACAA8AAAALAPT/AAADAAwAAAALAPX/AAADAA0AAAALAPb/AAADAA4AAAALAPf/AAADAA8AAAAMAPT/AAAEAAwAAAAMAPX/AAAMAA0AAAAMAPb/AAAMAA4AAAAMAPf/AAAEAA8AAAANAPT/AAAFAAwAAAANAPX/AAANAA0AAAANAPb/AAANAA4AAAANAPf/AAAFAA8AAAAOAPT/AAAGAAwAAAAOAPX/AAAGAA0AAAAOAPb/AAAGAA4AAAAOAPf/AAAGAA8AAAAPAPT/AAAHAAwAAAAPAPX/AAAHAA0AAAAPAPb/AAAHAA4AAAAPAPf/AAAHAA8AAAAQAPT/AAAIAAwAAAAQAPX/AAAIAA0AAAAQAPb/AAAIAA4AAAAQAPf/AAAIAA8AAAARAPT/AAAJAAwAAAARAPX/AAAJAA0AAAARAPb/AAAJAA4AAAARAPf/AAAJAA8AAAAMAA4AAAAKAAgAAAANAA4AAAALAAgAAAAOAA4AAAAMAAgAAAAPAA4AAAANAAgAAAAQAA4AAAAOAAgAAAARAA4AAAAPAAgAAAAGAA4AAAAPAAgAAAAHAA4AAAALAAgAAAAIAA4AAAAMAAgAAAAJAA4AAAANAAgAAAAKAA4AAAAOAAgAAAALAA4AAAAPAAgAAAABAA4AAAAKAAgAAAACAA4AAAALAAgAAAADAA4AAAAMAAgAAAAEAA4AAAANAAgAAAAFAA4AAAAOAAgAAAD7/w4AAAALAAgAAAD8/w4AAAAMAAgAAAD9/w4AAAANAAgAAAD+/w4AAAAOAAgAAAD//w4AAAAPAAgAAAAAAA4AAAAPAAgAAAD6/w4AAAAKAAgAAAASAAgAAAASAAIAAAASAAkAAAASAAMAAAASAAoAAAASAAQAAAASAAsAAAASAAUAAAASAAwAAAASAAYAAAASAA0AAAASAAcAAAASAAIAAAASAAIAAAASAAMAAAASAAMAAAASAAQAAAASAAQAAAASAAUAAAASAAUAAAASAAYAAAASAAYAAAASAAcAAAASAAcAAAASAPz/AAASAAIAAAASAP3/AAASAAMAAAASAP7/AAASAAQAAAASAP//AAASAAUAAAASAAAAAAASAAYAAAASAAEAAAASAAcAAAASAPb/AAASAAIAAAASAPf/AAASAAMAAAASAPj/AAASAAQAAAASAPn/AAASAAUAAAASAPr/AAASAAYAAAASAPv/AAASAAcAAAASAPT/AAAQAAIAAAASAPX/AAAQAAMAAAD5//T/AAAJAAIAAAD5//X/AAAJAAMAAAASAA4AAAAQAAgAAAD5/w4AAAAJAAgAAAD5/wgAAAAVAAcAAAD5/wkAAAAVAAMAAAD5/woAAAAVAAQAAAD5/wsAAAAVAAUAAAD5/wwAAAAVAAYAAAD5/w0AAAAVAAcAAAD5/wMAAAAVAAIAAAD5/wQAAAAVAAMAAAD5/wUAAAAVAAQAAAD5/wYAAAAVAAUAAAD5/wcAAAAVAAYAAAD5//3/AAAVAAIAAAD5//7/AAAVAAMAAAD5////AAAVAAQAAAD5/wAAAAAVAAUAAAD5/wEAAAAVAAYAAAD5/wIAAAAVAAcAAAD5//f/AAAVAAIAAAD5//j/AAAVAAMAAAD5//n/AAAVAAQAAAD5//r/AAAVAAUAAAD5//v/AAAVAAYAAAD5//z/AAAVAAcAAAD5//b/AAAVAAUAAAD+//X/AAAMAA0AAAD+//b/AAAMAA4AAAD///X/AAANAA0AAAD///b/AAANAA4AAAA=")
 tile_set = SubResource("TileSet_rih6e")
 
 [node name="platforms" type="TileMapLayer" parent="."]
@@ -1371,7 +1564,7 @@ tile_map_data = PackedByteArray("AAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD6/wIAAAAAAAI
 tile_set = SubResource("TileSet_eso5p")
 
 [node name="tools" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAEAAEAAAAXABEAAAAEAAIAAAAXABIAAAAEAAMAAAAXABMAAAAEAAQAAAAXABQAAAAFAAEAAAAYABEAAAAFAAIAAAAYABIAAAAFAAMAAAAYABMAAAAFAAQAAAAYABQAAAAGAAEAAAAZABEAAAAGAAIAAAAZABIAAAAGAAMAAAAZABMAAAAGAAQAAAAZABQAAAAHAAEAAAAaABEAAAAHAAIAAAAaABIAAAAHAAMAAAAaABMAAAAHAAQAAAAaABQAAAADAAEAAAAWABEAAAADAAIAAAAWABIAAAADAAMAAAAWABMAAAADAAQAAAAWABQAAAAEAAUAAAAXABUAAAAFAAUAAAAYABUAAAAGAAUAAAAZABUAAAAHAAUAAAAaABUAAAAIAAEAAAAbABEAAAAIAAIAAAAbABIAAAAIAAMAAAAbABMAAAAIAAQAAAAbABQAAAAFAAAAAAAYABAAAAAGAAAAAAAZABAAAAD+//f/AAAWAAoAAAD///f/AAABAAgAAAAFAAYAAAAWAAoAAAAFAAcAAAAWAAsAAAAFAAgAAAAWAAwAAAAFAAkAAAAWAA0AAAAFAAoAAAAWAA4AAAAFAAsAAAAWAA8AAAAGAAYAAAAXAAoAAAAGAAcAAAAXAAsAAAAGAAgAAAAXAAwAAAAGAAkAAAAXAA0AAAAGAAoAAAAXAA4AAAAGAAsAAAAXAA8AAAAOAP7/AAAWAAoAAAAOAP//AAAWAAsAAAAOAAAAAAAWAAwAAAAOAAEAAAAWAA0AAAAOAAIAAAAWAA4AAAAOAAMAAAAWAA8AAAAPAP7/AAAXAAoAAAAPAP//AAAXAAsAAAAPAAAAAAAXAAwAAAAPAAEAAAAXAA0AAAAPAAIAAAAXAA4AAAAPAAMAAAAXAA8AAAAFAPb/AAAWAAoAAAAFAPf/AAAWAAsAAAAFAPj/AAAWAAwAAAAFAPn/AAAWAA0AAAAFAPr/AAAWAA4AAAAFAPv/AAAWAA8AAAAGAPb/AAAXAAoAAAAGAPf/AAAXAAsAAAAGAPj/AAAXAAwAAAAGAPn/AAAXAA0AAAAGAPr/AAAXAA4AAAAGAPv/AAAXAA8AAAD8////AAAWAAsAAAD8/wAAAAAWAAwAAAD8/wEAAAAWAA0AAAD8/wIAAAAWAA4AAAD8/wMAAAAWAA8AAAD9////AAAXAAsAAAD9/wAAAAAXAAwAAAD9/wEAAAAXAA0AAAD9/wIAAAAXAA4AAAD9/wMAAAAXAA8AAAD6//f/AAAKAAUAAAD6//j/AAAKAAYAAAD6//n/AAAKAAcAAAD7//f/AAALAAUAAAD7//j/AAALAAYAAAD7//n/AAALAAcAAAD8//f/AAAKAAkAAAD8//j/AAAKAAoAAAD8//n/AAAKAAsAAAD9//f/AAALAAkAAAD9//j/AAALAAoAAAD9//n/AAALAAsAAAAQAPf/AAAKAAkAAAAQAPj/AAAKAAoAAAAQAPn/AAAKAAsAAAARAPf/AAALAAkAAAARAPj/AAALAAoAAAARAPn/AAALAAsAAAAMAAoAAAAKAAkAAAAMAAsAAAAKAAoAAAAMAAwAAAAKAAsAAAANAAoAAAALAAkAAAANAAsAAAALAAoAAAANAAwAAAALAAsAAAD8/wcAAAAKAAkAAAD8/wgAAAAKAAoAAAD8/wkAAAAKAAsAAAD9/wcAAAALAAkAAAD9/wgAAAALAAoAAAD9/wkAAAALAAsAAAD+/wUAAAAKAA0AAAD+/wYAAAAKAA4AAAD+/wcAAAAKAA8AAAD//wUAAAALAA0AAAD//wYAAAALAA4AAAD//wcAAAALAA8AAAAPAAUAAAAKAA0AAAAPAAYAAAAKAA4AAAAPAAcAAAAKAA8AAAAQAAUAAAALAA0AAAAQAAYAAAALAA4AAAAQAAcAAAALAA8AAAAJAPr/AAAKAA0AAAAJAPv/AAAKAA4AAAAJAPz/AAAKAA8AAAAKAPr/AAALAA0AAAAKAPv/AAALAA4AAAAKAPz/AAALAA8AAAD6/wYAAAAKABIAAAD6/wcAAAAKABMAAAD7/wYAAAALABIAAAD7/wcAAAALABMAAAAJAAwAAAAKABIAAAAJAA0AAAAKABMAAAAKAAwAAAALABIAAAAKAA0AAAALABMAAAD9//r/AAAKABIAAAD9//v/AAAKABMAAAD+//r/AAALABIAAAD+//v/AAALABMAAAAQAPv/AAAKABIAAAAQAPz/AAAKABMAAAARAPv/AAALABIAAAARAPz/AAALABMAAAAQAAsAAAASABMAAAAQAAwAAAASABQAAAAQAA0AAAASABUAAAARAAsAAAATABMAAAARAAwAAAATABQAAAARAA0AAAATABUAAAD7/woAAAAOABMAAAD7/wsAAAAOABQAAAD7/wwAAAAOABUAAAD8/woAAAAPABMAAAD8/wsAAAAPABQAAAD8/wwAAAAPABUAAAAMAPj/AAAOAA8AAAAMAPn/AAAOABAAAAAMAPr/AAAOABEAAAANAPj/AAAPAA8AAAANAPn/AAAPABAAAAANAPr/AAAPABEAAAD6//v/AAAYAAYAAAD6//z/AAAYAAcAAAD6//3/AAAYAAgAAAD7//v/AAAZAAYAAAD7//z/AAAZAAcAAAD7//3/AAAZAAgAAAABAAsAAAAKAAEAAAABAAwAAAAKAAIAAAABAA0AAAAKAAMAAAACAAsAAAALAAEAAAACAAwAAAALAAIAAAACAA0AAAALAAMAAAAJAPf/AAAKAAEAAAAJAPj/AAAKAAIAAAAJAPn/AAAKAAMAAAAKAPf/AAALAAEAAAAKAPj/AAALAAIAAAAKAPn/AAALAAMAAAD///X/AAABAAYAAAD///b/AAABAAcAAAD///j/AAABAAkAAAAAAPX/AAACAAYAAAAAAPb/AAACAAcAAAAAAPf/AAACAAgAAAAAAPj/AAACAAkAAAABAPX/AAADAAYAAAABAPb/AAADAAcAAAABAPf/AAADAAgAAAABAPj/AAADAAkAAAACAPX/AAAEAAYAAAACAPb/AAAEAAcAAAACAPf/AAAEAAgAAAACAPj/AAAEAAkAAAD7//7/AAAZAAkAAAD6//7/AAAYAAkAAAAQAAgAAAAIAB4AAAAQAAkAAAAIAB8AAAARAAgAAAAJAB4AAAARAAkAAAAJAB8AAAAOAAwAAAASAB4AAAAOAA0AAAASAB8AAAAPAAwAAAATAB4AAAAPAA0AAAATAB8AAAD//wwAAAAKAB4AAAD//w0AAAAKAB8AAAAAAAwAAAALAB4AAAAAAA0AAAALAB8AAAA=")
+tile_map_data = PackedByteArray("AAAEAAEAAAAXABEAAAAEAAIAAAAXABIAAAAEAAMAAAAXABMAAAAEAAQAAAAXABQAAAAFAAEAAAAYABEAAAAFAAIAAAAYABIAAAAFAAMAAAAYABMAAAAFAAQAAAAYABQAAAAGAAEAAAAZABEAAAAGAAIAAAAZABIAAAAGAAMAAAAZABMAAAAGAAQAAAAZABQAAAAHAAEAAAAaABEAAAAHAAIAAAAaABIAAAAHAAMAAAAaABMAAAAHAAQAAAAaABQAAAADAAEAAAAWABEAAAADAAIAAAAWABIAAAADAAMAAAAWABMAAAADAAQAAAAWABQAAAAEAAUAAAAXABUAAAAFAAUAAAAYABUAAAAGAAUAAAAZABUAAAAHAAUAAAAaABUAAAAIAAEAAAAbABEAAAAIAAIAAAAbABIAAAAIAAMAAAAbABMAAAAIAAQAAAAbABQAAAAFAAAAAAAYABAAAAAGAAAAAAAZABAAAAD+//f/AAAWAAoAAAD///f/AAABAAgAAAAFAAYAAAAWAAoAAAAFAAcAAAAWAAsAAAAFAAgAAAAWAAwAAAAFAAkAAAAWAA0AAAAFAAoAAAAWAA4AAAAFAAsAAAAWAA8AAAAGAAYAAAAXAAoAAAAGAAcAAAAXAAsAAAAGAAgAAAAXAAwAAAAGAAkAAAAXAA0AAAAGAAoAAAAXAA4AAAAGAAsAAAAXAA8AAAAOAP7/AAAWAAoAAAAOAP//AAAWAAsAAAAOAAAAAAAWAAwAAAAOAAEAAAAWAA0AAAAOAAIAAAAWAA4AAAAOAAMAAAAWAA8AAAAPAP7/AAAXAAoAAAAPAP//AAAXAAsAAAAPAAAAAAAXAAwAAAAPAAEAAAAXAA0AAAAPAAIAAAAXAA4AAAAPAAMAAAAXAA8AAAAFAPb/AAAWAAoAAAAFAPf/AAAWAAsAAAAFAPj/AAAWAAwAAAAFAPn/AAAWAA0AAAAFAPr/AAAWAA4AAAAFAPv/AAAWAA8AAAAGAPb/AAAXAAoAAAAGAPf/AAAXAAsAAAAGAPj/AAAXAAwAAAAGAPn/AAAXAA0AAAAGAPr/AAAXAA4AAAAGAPv/AAAXAA8AAAD8////AAAWAAsAAAD8/wAAAAAWAAwAAAD8/wEAAAAWAA0AAAD8/wIAAAAWAA4AAAD8/wMAAAAWAA8AAAD9////AAAXAAsAAAD9/wAAAAAXAAwAAAD9/wEAAAAXAA0AAAD9/wIAAAAXAA4AAAD9/wMAAAAXAA8AAAD6//f/AAAKAAUAAAD6//j/AAAKAAYAAAD6//n/AAAKAAcAAAD7//f/AAALAAUAAAD7//j/AAALAAYAAAD7//n/AAALAAcAAAD8//f/AAAKAAkAAAD8//j/AAAKAAoAAAD8//n/AAAKAAsAAAD9//f/AAALAAkAAAD9//j/AAALAAoAAAD9//n/AAALAAsAAAAQAPf/AAAKAAkAAAAQAPj/AAAKAAoAAAAQAPn/AAAKAAsAAAARAPf/AAALAAkAAAARAPj/AAALAAoAAAARAPn/AAALAAsAAAAMAAoAAAAKAAkAAAAMAAsAAAAKAAoAAAAMAAwAAAAKAAsAAAANAAoAAAALAAkAAAANAAsAAAALAAoAAAANAAwAAAALAAsAAAD8/wcAAAAKAAkAAAD8/wgAAAAKAAoAAAD8/wkAAAAKAAsAAAD9/wcAAAALAAkAAAD9/wgAAAALAAoAAAD9/wkAAAALAAsAAAD+/wUAAAAKAA0AAAD+/wYAAAAKAA4AAAD+/wcAAAAKAA8AAAD//wUAAAALAA0AAAD//wYAAAALAA4AAAD//wcAAAALAA8AAAAPAAUAAAAKAA0AAAAPAAYAAAAKAA4AAAAPAAcAAAAKAA8AAAAQAAUAAAALAA0AAAAQAAYAAAALAA4AAAAQAAcAAAALAA8AAAAJAPr/AAAKAA0AAAAJAPv/AAAKAA4AAAAJAPz/AAAKAA8AAAAKAPr/AAALAA0AAAAKAPv/AAALAA4AAAAKAPz/AAALAA8AAAD6/wYAAAAKABIAAAD6/wcAAAAKABMAAAD7/wYAAAALABIAAAD7/wcAAAALABMAAAAJAAwAAAAKABIAAAAJAA0AAAAKABMAAAAKAAwAAAALABIAAAAKAA0AAAALABMAAAD9//r/AAAKABIAAAD9//v/AAAKABMAAAD+//r/AAALABIAAAD+//v/AAALABMAAAAQAPv/AAAKABIAAAAQAPz/AAAKABMAAAARAPv/AAALABIAAAARAPz/AAALABMAAAAQAAsAAAASABMAAAAQAAwAAAASABQAAAAQAA0AAAASABUAAAARAAsAAAATABMAAAARAAwAAAATABQAAAARAA0AAAATABUAAAD7/woAAAAOABMAAAD7/wsAAAAOABQAAAD7/wwAAAAOABUAAAD8/woAAAAPABMAAAD8/wsAAAAPABQAAAD8/wwAAAAPABUAAAAMAPj/AAAOAA8AAAAMAPn/AAAOABAAAAAMAPr/AAAOABEAAAANAPj/AAAPAA8AAAANAPn/AAAPABAAAAANAPr/AAAPABEAAAD6//v/AAAYAAYAAAD6//z/AAAYAAcAAAD6//3/AAAYAAgAAAD7//v/AAAZAAYAAAD7//z/AAAZAAcAAAD7//3/AAAZAAgAAAABAAsAAAAKAAEAAAABAAwAAAAKAAIAAAABAA0AAAAKAAMAAAACAAsAAAALAAEAAAACAAwAAAALAAIAAAACAA0AAAALAAMAAAAJAPf/AAAKAAEAAAAJAPj/AAAKAAIAAAAJAPn/AAAKAAMAAAAKAPf/AAALAAEAAAAKAPj/AAALAAIAAAAKAPn/AAALAAMAAAD///X/AAABAAYAAAD///b/AAABAAcAAAD///j/AAABAAkAAAAAAPX/AAACAAYAAAAAAPb/AAACAAcAAAAAAPf/AAACAAgAAAAAAPj/AAACAAkAAAABAPX/AAADAAYAAAABAPb/AAADAAcAAAABAPf/AAADAAgAAAABAPj/AAADAAkAAAACAPX/AAAEAAYAAAACAPb/AAAEAAcAAAACAPf/AAAEAAgAAAACAPj/AAAEAAkAAAD7//7/AAAZAAkAAAD6//7/AAAYAAkAAAAQAAgAAAAIAB4AAAAQAAkAAAAIAB8AAAARAAgAAAAJAB4AAAARAAkAAAAJAB8AAAAOAAwAAAASAB4AAAAOAA0AAAASAB8AAAAPAAwAAAATAB4AAAAPAA0AAAATAB8AAAD//wwAAAAKAB4AAAD//w0AAAAKAB8AAAAAAAwAAAALAB4AAAAAAA0AAAALAB8AAAD6//X/AAAQAAwAAAD6//b/AAAQAA0AAAD7//X/AAARAAwAAAD7//b/AAARAA0AAAD8//X/AAAQAAwAAAD8//b/AAAQAA0AAAD9//X/AAARAAwAAAD9//b/AAARAA0AAAA=")
 tile_set = SubResource("TileSet_shtpt")
 
 [node name="Riddle1" type="Sprite2D" parent="."]
@@ -1395,6 +1588,82 @@ horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Label" parent="Riddle1"]
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 142.0
+offset_bottom = 57.0
+text = "E
+"
+label_settings = SubResource("LabelSettings_lfoye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="blinking_answers" type="AnimationPlayer" parent="Riddle1/E"]
+libraries = {
+&"": SubResource("AnimationLibrary_2kv06")
+}
+
+[node name="N" type="Label" parent="Riddle1"]
+offset_left = 87.0
+offset_top = 16.0
+offset_right = 103.0
+offset_bottom = 23.0
+text = "N"
+label_settings = SubResource("LabelSettings_lfoye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="blinking_answers" type="AnimationPlayer" parent="Riddle1/N"]
+libraries = {
+&"": SubResource("AnimationLibrary_shtpt")
+}
+
+[node name="S" type="Label" parent="Riddle1"]
+offset_left = 88.0
+offset_top = 68.0
+offset_right = 104.0
+offset_bottom = 75.0
+text = "S"
+label_settings = SubResource("LabelSettings_lfoye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="blinking_answers" type="AnimationPlayer" parent="Riddle1/S"]
+libraries = {
+&"": SubResource("AnimationLibrary_p8d8c")
+}
+
+[node name="W" type="Label" parent="Riddle1"]
+offset_left = 50.0
+offset_top = 43.0
+offset_right = 66.0
+offset_bottom = 50.0
+text = "W"
+label_settings = SubResource("LabelSettings_lfoye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="blinking_answers" type="AnimationPlayer" parent="Riddle1/W"]
+libraries = {
+&"": SubResource("AnimationLibrary_f6mps")
+}
+
+[node name="Pillar" type="Label" parent="Riddle1"]
+offset_left = 69.0
+offset_top = -25.0
+offset_right = 122.0
+offset_bottom = 1.0
+text = "GO TO THE PILLAR"
+label_settings = SubResource("LabelSettings_683ma")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="North" type="Sprite2D" parent="."]
 script = ExtResource("9_b4bn3")
@@ -1442,7 +1711,36 @@ position = Vector2(-48.5, 35)
 shape = SubResource("RectangleShape2D_eso5p")
 
 [node name="player" parent="." instance=ExtResource("7_j46pd")]
+z_index = 6
 position = Vector2(13, -54)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(3, 3)
+
+[node name="RIP" type="Label" parent="."]
+offset_left = 200.0
+offset_top = -110.0
+offset_right = 216.0
+offset_bottom = -103.0
+text = "RIP"
+label_settings = SubResource("LabelSettings_lfoye")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RIP"]
+libraries = {
+&"": SubResource("AnimationLibrary_683ma")
+}
+autoplay = "blinking"
+
+[node name="Sign" type="Label" parent="."]
+offset_left = -84.0
+offset_top = -171.0
+offset_right = -44.0
+offset_bottom = -141.0
+text = "FIND THE GRAVE"
+label_settings = SubResource("LabelSettings_2kv06")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
