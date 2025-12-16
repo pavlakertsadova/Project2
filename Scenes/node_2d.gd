@@ -5,6 +5,8 @@ func _ready():
 	
 	# 1. Зареждаме записа
 	Global.load_game()
+	Global.level_progress["puzzle3"] = false
+	Global.save_game()
 	print("Прогрес след зареждане: ", Global.level_progress)
 	print("Последен пъзел: ", Global.last_solved_puzzle)
 
@@ -18,6 +20,11 @@ func _ready():
 		$openDoor2.visible = false
 	else:
 		print("ГРЕШКА: Не намирам 'openDoor2' в сцената!")
+	
+	if has_node("openDoor3"): 
+		$openDoor3.visible = false
+	else:
+		print("ГРЕШКА: Не намирам 'openDoor3' в сцената!")
 
 	# --- ПРОВЕРКА ЗА ПЪЗЕЛ 1 ---
 	if Global.level_progress.has("puzzle1") and Global.level_progress["puzzle1"] == true:
@@ -71,3 +78,18 @@ func _ready():
 			print("Героят е преместен пред Врата 2.")
 		elif has_node("playe"):
 			$playe.position = Vector2(-531, 1891)
+			
+	if Global.level_progress.has("puzzle3") and Global.level_progress["puzzle3"] == true:
+		print("Пъзел 3 е РЕШЕН. Опитвам се да отворя Врата 3...")
+		if has_node("openDoor3"):
+			$openDoor3.visible = true
+			print(" -> 'openDoor3' стана видима.")
+		else:
+			print(" -> ГРЕШКА: Не намирам 'openDoor3'!")
+		if has_node("door3"):
+			$door3.queue_free()
+			print(" -> 'door3' е изтрита.")
+		else:
+			print(" -> ГРЕШКА: Не намирам затворената врата 3! Провери името ѝ!")
+	else:
+		print("Пъзел 3 НЕ е решен според записа.")
