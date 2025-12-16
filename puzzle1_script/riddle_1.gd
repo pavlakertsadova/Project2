@@ -1,12 +1,29 @@
 extends Sprite2D
 
+const ANSWER_IDS := ["N", "E", "S", "W"]
+
+@onready var pillar: Label = $Pillar
 @onready var area: Area2D = $Area2D
 @onready var interact_label: Label = $Label
+@onready var blink_players := [
+	$E/blinking_answers,
+	$N/blinking_answers,
+	$S/blinking_answers,
+	$W/blinking_answers
+]
+@onready var answer_nodes := [
+	get_parent().get_node("North"),
+	get_parent().get_node("East"),
+	get_parent().get_node("South"),
+	get_parent().get_node("West")
+]
+@export var correct_answer := "W"
 
+var blinking_started := false
 var player_in_range := false
 var texts = [
 	"Press [E] to interact.",
-	"Only the plate that faces the liar is safe to stand upon.",
+	"Only the plate that faces the liar is safe to stand upon.\n [E] to continue",
 	"North claims: I am the correct plate.\nSouth claims: North is lying.\nEast claims: West is wrong.\nWest is silent."
 ]
 var texts_index = 0
@@ -17,6 +34,18 @@ func _ready():
 	area.body_entered.connect(_on_body_entered)
 	area.body_exited.connect(_on_body_exited)
 	interact_label.visible = false
+	pillar.visible = false
+	for p in blink_players:
+		p.stop()
+		p.get_parent().visible = false
+	for a in answer_nodes:
+		a.plate_chosen.connect(_on_plate_chosen)
+
+func _on_plate_chosen(chosen_name: String):
+	if chosen_name == correct_answer:
+		on_correct_answer(chosen_name)
+	else:
+		on_wrong_answer()
 
 func _on_body_entered(body):
 	if body is Player:
@@ -39,8 +68,37 @@ func _input(event):
 
 func interact():
 	print("Interacted with", name)
+	if not blinking_started:
+		for p in blink_players:
+			p.get_parent().visible = true
+			p.play("blink_answers")
+		blinking_started = true
+		return
 	if texts_index < texts.size():
 		interact_label.text = texts[texts_index]
 	else:
 		interact_label.visible = false
-		text_change = false	
+		text_change = false
+
+func on_correct_answer(correct_id: String):
+	for i in range(blink_players.size()):
+		var letter: String = ANSWER_IDS[i]
+
+		if letter == correct_id:
+			blink_players[i].stop()
+			blink_players[i].get_parent().visible = true
+		else:
+			blink_players[i].get_parent().visible = false
+	pillar.visible = true
+	print("PUZZLE SOLVED")
+
+func on_wrong_answer():
+	for p in blink_players:
+		p.play("blinking_red")
+
+	await get_tree().create_timer(0.25).timeout
+
+	for p in blink_players:
+		p.play("blink_answers")
+
+	print("Try again")

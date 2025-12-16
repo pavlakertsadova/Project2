@@ -2,6 +2,9 @@ extends Sprite2D
 
 @export var is_correct_plate := false
 @onready var area: Area2D = $Area2D
+@export var plate_id := "E"
+
+signal plate_chosen(plate_name: String)
 
 var player_on_plate := false
 
@@ -19,9 +22,11 @@ func _on_body_exited(body):
 
 func _input(event):
 	if player_on_plate and event.is_action_pressed("interact"):
+		emit_signal("plate_chosen", plate_id)
 		interact()
 
 func interact():
+	pass
 	if is_correct_plate:
 		print(">>> Correct plate chosen!")
 	else:
