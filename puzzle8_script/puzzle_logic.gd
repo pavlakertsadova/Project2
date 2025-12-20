@@ -67,6 +67,7 @@ func update_symbols() -> void:
 func reset_levers():
 	for lever in levers:
 		lever.force_off()
+		lever_states[lever.lever_id] = false
 
 func unlock_symbol(letter: String):
 	if unlocked[letter]:
