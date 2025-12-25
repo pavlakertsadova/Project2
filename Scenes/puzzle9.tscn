@@ -1389,7 +1389,7 @@ size = Vector2(28, 73.9999)
 font = ExtResource("8_8wo1r")
 font_size = 21
 
-[node name="puzzle7" type="Node2D"]
+[node name="puzzle9" type="Node2D"]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_o47e1")
 
