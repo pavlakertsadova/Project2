@@ -1,13 +1,13 @@
 [gd_scene load_steps=23 format=4 uid="uid://bosaiuxf7i2kx"]
 
-[ext_resource type="Script" uid="uid://dmn5hlhdaxdjj" path="res://Script/puzzle_3.gd" id="1_5nrw3"]
+[ext_resource type="Script" uid="uid://dmn5hlhdaxdjj" path="res://script/puzzle_3.gd" id="1_5nrw3"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="2_0fipg"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="3_s7ej6"]
 [ext_resource type="Texture2D" uid="uid://dde47gxl708i4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Struct.png" id="4_wykeh"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="5_w2a0o"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="6_d46ik"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="7_c3qxv"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="8_s7ej6"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="8_s7ej6"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="9_wykeh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jtyga"]

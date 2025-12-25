@@ -23,12 +23,12 @@ var blinking_started := false
 var player_in_range := false
 var texts = [
 	"Press [E] to interact.",
-	"Only the plate that faces the liar is safe to stand upon.\n [E] to continue",
-	"North claims: I am the correct plate.\nSouth claims: North is lying.\nEast claims: West is wrong.\nWest is silent."
+	"Exactly one of the four is lying.\nThe liar's plate is safe to be pressed.\n [E] to continue",
+	"North: South is telling the truth.\nSouth: East is telling the truth.\nEast: West is the right plate\nWest: North is lying",
+	"To choose an answer stand on the plate and press [E]"
 ]
 var texts_index = 0
 var text_change = false
-
 
 func _ready():
 	area.body_entered.connect(_on_body_entered)

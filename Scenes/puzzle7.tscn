@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dj0wy0td4mkla" path="res://Assets/nail.png" id="8_6ywl8"]
 [ext_resource type="Texture2D" uid="uid://bs3c3p6uulxaf" path="res://Assets/cube.png" id="9_rsg3k"]
 [ext_resource type="Script" uid="uid://bnb7y6fjsjyhb" path="res://puzzle7_script/exit.gd" id="10_ierpt"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="11_7q1si"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="11_7q1si"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="13_duobs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nxem"]
@@ -1344,7 +1344,7 @@ tile_map_data = PackedByteArray("AAAHABoAAAACAAYAAAAHABsAAAACAAcAAAAHABwAAAACAAg
 tile_set = SubResource("TileSet_4nv16")
 
 [node name="decor" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAALAAsAAAAQAAYAAAALAAwAAAAQAAcAAAALAA0AAAAQAAgAAAAMAAsAAAARAAYAAAAMAAwAAAARAAcAAAAMAA0AAAARAAgAAAADAAsAAAAQAAYAAAADAAwAAAAQAAcAAAADAA0AAAAQAAgAAAAEAAsAAAARAAYAAAAEAAwAAAARAAcAAAAEAA0AAAARAAgAAAAIAAAAAAAQAAYAAAAIAAEAAAAQAAcAAAAIAAIAAAAQAAgAAAAJAAAAAAARAAYAAAAJAAEAAAARAAcAAAAJAAIAAAARAAgAAAAQAAAAAAAQAAYAAAAQAAEAAAAQAAcAAAAQAAIAAAAQAAgAAAARAAAAAAARAAYAAAARAAEAAAARAAcAAAARAAIAAAARAAgAAAAWABQAAAAQAAYAAAAWABUAAAAQAAcAAAAWABYAAAAQAAgAAAAXABQAAAARAAYAAAAXABUAAAARAAcAAAAXABYAAAARAAgAAAAfABQAAAAQAAYAAAAfABUAAAAQAAcAAAAfABYAAAAQAAgAAAAgABQAAAARAAYAAAAgABUAAAARAAcAAAAgABYAAAARAAgAAAAGAAQAAAAVABAAAAAGAAUAAAAVABEAAAABAAQAAAAVABAAAAABAAUAAAAVABEAAAASAAAAAAAQAAYAAAASAAEAAAAQAAcAAAASAAIAAAAQAAgAAAATAAAAAAARAAYAAAATAAEAAAARAAcAAAATAAIAAAARAAgAAAAbAAAAAAAQAAYAAAAbAAEAAAAQAAcAAAAbAAIAAAAQAAgAAAAcAAAAAAARAAYAAAAcAAEAAAARAAcAAAAcAAIAAAARAAgAAAA=")
+tile_map_data = PackedByteArray("AAALAAsAAAAQAAYAAAALAAwAAAAQAAcAAAALAA0AAAAQAAgAAAAMAAsAAAARAAYAAAAMAAwAAAARAAcAAAAMAA0AAAARAAgAAAADAAsAAAAQAAYAAAADAAwAAAAQAAcAAAADAA0AAAAQAAgAAAAEAAsAAAARAAYAAAAEAAwAAAARAAcAAAAEAA0AAAARAAgAAAAIAAAAAAAQAAYAAAAIAAEAAAAQAAcAAAAIAAIAAAAQAAgAAAAJAAAAAAARAAYAAAAJAAEAAAARAAcAAAAJAAIAAAARAAgAAAAQAAAAAAAQAAYAAAAQAAEAAAAQAAcAAAAQAAIAAAAQAAgAAAARAAAAAAARAAYAAAARAAEAAAARAAcAAAARAAIAAAARAAgAAAAWABQAAAAQAAYAAAAWABUAAAAQAAcAAAAWABYAAAAQAAgAAAAXABQAAAARAAYAAAAXABUAAAARAAcAAAAXABYAAAARAAgAAAAfABQAAAAQAAYAAAAfABUAAAAQAAcAAAAfABYAAAAQAAgAAAAgABQAAAARAAYAAAAgABUAAAARAAcAAAAgABYAAAARAAgAAAASAAAAAAAQAAYAAAASAAEAAAAQAAcAAAASAAIAAAAQAAgAAAATAAAAAAARAAYAAAATAAEAAAARAAcAAAATAAIAAAARAAgAAAAbAAAAAAAQAAYAAAAbAAEAAAAQAAcAAAAbAAIAAAAQAAgAAAAcAAAAAAARAAYAAAAcAAEAAAARAAcAAAAcAAIAAAARAAgAAAABAAQAAAAVABEAAAABAAMAAAAVABAAAAAGAAQAAAAVABEAAAAGAAMAAAAVABAAAAA=")
 tile_set = SubResource("TileSet_hng1d")
 
 [node name="puzzle_weight_logic" type="Node2D" parent="."]
@@ -1568,12 +1568,12 @@ zoom = Vector2(3, 3)
 
 [node name="Label" type="Node2D" parent="."]
 
-[node name="Label1" type="Label" parent="Label"]
+[node name="Plate1" type="Label" parent="Label"]
 offset_left = 142.0
 offset_top = 3.0
 offset_right = 271.0
 offset_bottom = 61.0
-text = "Plate1: I have no beginning and no end."
+text = "Plate2: I have no beginning and no end."
 label_settings = SubResource("LabelSettings_4nv16")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1584,7 +1584,7 @@ offset_left = 67.0
 offset_top = 178.0
 offset_right = 188.0
 offset_bottom = 236.0
-text = "Plate2: I am cold to touch, but forged in fire"
+text = "Plate3: I am cold to touch, but forged in fire"
 label_settings = SubResource("LabelSettings_duobs")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1595,7 +1595,7 @@ offset_left = 303.0
 offset_top = -1.0
 offset_right = 448.0
 offset_bottom = 66.0
-text = "Plate3: I watch but cannot see, I stand but cannot walk."
+text = "Plate1: I watch but cannot see, I stand but cannot walk."
 label_settings = SubResource("LabelSettings_2gtg8")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1614,10 +1614,10 @@ autowrap_mode = 3
 
 [node name="Instructions" type="Label" parent="Label"]
 offset_left = 16.0
-offset_top = 41.0
+offset_top = 39.0
 offset_right = 108.0
-offset_bottom = 99.0
-text = "Press [SPACE] to grab and drop the objects."
+offset_bottom = 97.0
+text = "[SPACE] to move the objects. Choose the right obj ects and plates"
 label_settings = SubResource("LabelSettings_hng1d")
 horizontal_alignment = 1
 vertical_alignment = 1
