@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dawdunong1upo"
-path="res://.godot/imported/puzzle1.png-140228dd9ba31cfbb581878573e993d9.ctex"
+uid="uid://bjch61dhmsltd"
+path="res://.godot/imported/Statue.png-d121fd1880483555efb999b8d9b820a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/puzzle1.png"
-dest_files=["res://.godot/imported/puzzle1.png-140228dd9ba31cfbb581878573e993d9.ctex"]
+source_file="res://Assets/Statue.png"
+dest_files=["res://.godot/imported/Statue.png-d121fd1880483555efb999b8d9b820a0.ctex"]
 
 [params]
 
