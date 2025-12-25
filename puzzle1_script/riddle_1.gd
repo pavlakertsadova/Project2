@@ -90,7 +90,16 @@ func on_correct_answer(correct_id: String):
 		else:
 			blink_players[i].get_parent().visible = false
 	pillar.visible = true
+	show_label()
 	print("PUZZLE SOLVED")
+
+func show_label():
+	pillar.modulate.a = 1.0
+	var original_y = pillar.position.y
+	
+	var tween = create_tween().set_loops()
+	tween.tween_property(pillar, "position:y", original_y - 5, 1.0)
+	tween.tween_property(pillar, "position:y", original_y + 5, 1.0)
 
 func on_wrong_answer():
 	for p in blink_players:

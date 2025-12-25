@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dxfe3v6h758r0"]
+[gd_scene load_steps=52 format=3 uid="uid://dxfe3v6h758r0"]
 
 [ext_resource type="Script" uid="uid://7q4a4anb62fc" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bhwt1kiot67a3" path="res://Assets/elements-supremacy-spritesheets/spaghetti_atlas.png" id="2_qhqgy"]
@@ -386,7 +386,11 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvl01"]
 height = 40.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 27.0
+
 [node name="player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 6
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -398,3 +402,14 @@ animation = &"default_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 18)
 shape = SubResource("CapsuleShape2D_nvl01")
+
+[node name="PickupArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
+position = Vector2(2, 13)
+shape = SubResource("CircleShape2D_g2els")
+
+[node name="CarryPoint" type="Node2D" parent="."]
+position = Vector2(45, 6)
