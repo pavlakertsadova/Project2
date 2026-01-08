@@ -24,6 +24,7 @@ func _ready() -> void:
 	await get_tree().create_timer(5.0).timeout
 	if not first_part_solved:
 		intro_label.visible = false
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 
 func _process(_delta: float) -> void:

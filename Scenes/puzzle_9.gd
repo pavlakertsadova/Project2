@@ -16,7 +16,7 @@ func _ready() -> void:
 		special_column.connect("column_touched", Callable(self, "_on_column_touched"))
 	else:
 		print("ERROR: SpecialColumn has no signal 'column_touched'. Did you add the script to it?")
-
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 func _on_column_touched() -> void:
 	print("Puzzle solved: column touched.")
 	puzzle_solved.emit()

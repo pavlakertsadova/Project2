@@ -15,6 +15,7 @@ func _ready():
 	update_level()
 	await get_tree().physics_frame
 	set_player_spawn()
+	AudioManager.set_mode(AudioManager.MusicMode.MAIN)
 
 func update_level():
 	# Скриваме всички отворени врати за безопасност

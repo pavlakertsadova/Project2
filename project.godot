@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Puzzle1Answer="*res://puzzle1_script/puzzle1_answer.gd"
 Global="*res://Global.gd"
+AudioManager="*res://Scenes/AudioManager.tscn"
 
 [input]
 
