@@ -1,27 +1,27 @@
 [gd_scene load_steps=54 format=4 uid="uid://bh7nudw6bjfgl"]
 
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="1_4d7sh"]
-[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://scenes/node_2d.gd" id="1_he4j0"]
-[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://scenes/`door_2.gd" id="1_p20hg"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="1_4d7sh"]
+[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://Scenes/node_2d.gd" id="1_he4j0"]
+[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://Scenes/`door_2.gd" id="1_p20hg"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="1_v7gqg"]
 [ext_resource type="Texture2D" uid="uid://bp7b1hou08nlw" path="res://Assets/TX Props with Shadow.png" id="2_85gyg"]
 [ext_resource type="Texture2D" uid="uid://dde47gxl708i4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Struct.png" id="2_chwn1"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_hvaui"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="4_2ooml"]
-[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://scenes/door_3.gd" id="4_fg7i4"]
+[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://Scenes/door_3.gd" id="4_fg7i4"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_p20hg"]
 [ext_resource type="Texture2D" uid="uid://b0eef2auba37w" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow.png" id="6_he4j0"]
 [ext_resource type="Texture2D" uid="uid://bdv0m6vn3j3ws" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow Plant.png" id="7_85gyg"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="8_c32x4"]
-[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://scenes/enemy.tscn" id="10_hvaui"]
-[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://script/door.gd" id="10_p20hg"]
-[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://scenes/GameManager.tscn" id="15_c32x4"]
-[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://scenes/door_4.gd" id="17_gwne5"]
-[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://scenes/door_5.gd" id="18_hpu6p"]
-[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://scenes/door_6.gd" id="19_op2xg"]
-[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://scenes/door_7.gd" id="20_1nvmp"]
-[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://scenes/door_8.gd" id="21_el1jj"]
-[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://scenes/door_9.gd" id="22_03fgm"]
+[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://Scenes/enemy.tscn" id="10_hvaui"]
+[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://Script/door.gd" id="10_p20hg"]
+[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://Scenes/GameManager.tscn" id="15_c32x4"]
+[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://Scenes/door_4.gd" id="17_gwne5"]
+[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://Scenes/door_5.gd" id="18_hpu6p"]
+[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://Scenes/door_6.gd" id="19_op2xg"]
+[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://Scenes/door_7.gd" id="20_1nvmp"]
+[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://Scenes/door_8.gd" id="21_el1jj"]
+[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://Scenes/door_9.gd" id="22_03fgm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8dv2"]
 texture = ExtResource("1_v7gqg")
@@ -2630,8 +2630,8 @@ shape = SubResource("CapsuleShape2D_uu23e")
 
 [node name="door1" type="Sprite2D" parent="closedDoors"]
 z_index = 5
-position = Vector2(161, 2370)
-scale = Vector2(1.78114, 2.05967)
+position = Vector2(161.498, 2374.44)
+scale = Vector2(1.76557, 1.91872)
 texture = ExtResource("5_p20hg")
 region_enabled = true
 region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
@@ -2714,8 +2714,8 @@ shape = SubResource("CapsuleShape2D_1nvmp")
 
 [node name="door6" type="Sprite2D" parent="closedDoors"]
 z_index = 6
-position = Vector2(-80, 986)
-scale = Vector2(1.4375, 1.68254)
+position = Vector2(-82.5, 989.5)
+scale = Vector2(1.51563, 1.63492)
 texture = ExtResource("5_p20hg")
 region_enabled = true
 region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
@@ -2742,7 +2742,7 @@ position = Vector2(1.15146, 2.02004)
 shape = SubResource("CapsuleShape2D_ny2ev")
 
 [node name="door8" type="Sprite2D" parent="closedDoors"]
-position = Vector2(270, 900.5)
+position = Vector2(269, 901)
 scale = Vector2(1.78125, 1.95238)
 texture = ExtResource("5_p20hg")
 region_enabled = true
@@ -2752,11 +2752,12 @@ script = ExtResource("21_el1jj")
 [node name="Area2D" type="Area2D" parent="closedDoors/door8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="closedDoors/door8/Area2D"]
+position = Vector2(1.12281, 2.56098)
 shape = SubResource("CapsuleShape2D_jiy1d")
 
 [node name="door9" type="Sprite2D" parent="closedDoors"]
-position = Vector2(508, 1217)
-scale = Vector2(1.29856, 1.51984)
+position = Vector2(510, 1213)
+scale = Vector2(1.38366, 1.60119)
 texture = ExtResource("5_p20hg")
 region_enabled = true
 region_rect = Rect2(14.398, 96.444, 64.5, 63.092)
@@ -2765,6 +2766,7 @@ script = ExtResource("22_03fgm")
 [node name="Area2D" type="Area2D" parent="closedDoors/door9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="closedDoors/door9/Area2D"]
+position = Vector2(0.522567, 0.351301)
 shape = SubResource("CapsuleShape2D_ud1os")
 
 [node name="Checkpoint_1" type="Node2D" parent="."]
