@@ -22,6 +22,7 @@ func _ready():
 	print("CHEST NODE =", chest)
 	for lever in levers:
 		lever.lever_toggled.connect(_on_lever_toggled)
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 	update_symbols()
 	

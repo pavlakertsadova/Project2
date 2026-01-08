@@ -31,6 +31,7 @@ func _ready() -> void:
 
 	# Enter в LineEdit
 	answer_edit2.text_submitted.connect(_on_answer_submitted)
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 
 func _process(delta: float) -> void:

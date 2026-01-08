@@ -4,6 +4,8 @@ extends Node2D
 signal puzzle_solved
 signal puzzle_closed
 
+func _ready():
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 # И в частта за верен отговор:
 func check_answer():
 	# ... твоя код за проверка ...
@@ -16,3 +18,4 @@ func check_answer():
 func _on_close_pressed():
 	puzzle_closed.emit()
 	queue_free()
+	

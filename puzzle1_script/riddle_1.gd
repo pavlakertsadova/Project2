@@ -40,6 +40,7 @@ func _ready():
 		p.get_parent().visible = false
 	for a in answer_nodes:
 		a.plate_chosen.connect(_on_plate_chosen)
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 func _on_plate_chosen(chosen_name: String):
 	if chosen_name == correct_answer:

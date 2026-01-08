@@ -21,6 +21,7 @@ func _ready():
 		update_label(text_start)
 	else:
 		print("Грешка: Не намирам играча в групата 'player'!")
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 func _input(event):
 	# Чакаме натискане на E
