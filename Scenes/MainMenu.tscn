@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://dywkfuf3vmenm"]
+
+[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://Scenes/MainMenu.gd" id="1_853f1"]
+[ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_tt5f1"]
+[ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="3_8saeu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_853f1"]
+font = ExtResource("3_8saeu")
+font_size = 48
+outline_size = 8
+outline_color = Color(0.0497766, 0.0497766, 0.0497766, 1)
+shadow_size = 10
+shadow_color = Color(0.00351917, 0.00351917, 0.00351917, 0)
+shadow_offset = Vector2(4, 4)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_853f1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tt5f1")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -22.0
+offset_right = -139.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.44763, 6.34657)
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START GAME"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1278.0
+offset_top = 190.0
+offset_right = -720.0
+offset_bottom = 257.0
+grow_horizontal = 2
+scale = Vector2(4.79313, 4.93145)
+theme_override_constants/line_spacing = 0
+text = "Escape     The    Maze"
+label_settings = SubResource("LabelSettings_853f1")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
