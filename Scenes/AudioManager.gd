@@ -1,5 +1,4 @@
-extends Node2D
-
+extends Node
 
 enum MusicMode { MENU, MAIN, PUZZLE }
 
@@ -8,29 +7,31 @@ enum MusicMode { MENU, MAIN, PUZZLE }
 @export var puzzle_music: AudioStream
 
 @export var music_bus := "Music"
-@export var base_volume_db := -8.0        # нормална сила
-@export var fade_time := 0.8              # секунди (0.5–1.2 е приятно)
-@export var silence_db := -60.0           # "тихо" (практически mute)
+@export var base_volume_db := -10.0      # малко по-тихо = по-приятно
+@export var fade_time := 1.4             # пробвай 1.2–2.0
+@export var silence_db := -60.0
 
-var _player: AudioStreamPlayer
+var _a: AudioStreamPlayer
+var _b: AudioStreamPlayer
+var _active: AudioStreamPlayer
+var _inactive: AudioStreamPlayer
 var _tween: Tween
 var _current_mode: int = -1
-var _is_switching := false
-var _queued_mode: int = -1
 
 func _ready():
-	_player = AudioStreamPlayer.new()
-	add_child(_player)
-	_player.bus = music_bus
-	_player.volume_db = base_volume_db
+	_a = _make_player()
+	_b = _make_player()
+	_active = _a
+	_inactive = _b
+
+func _make_player() -> AudioStreamPlayer:
+	var p := AudioStreamPlayer.new()
+	add_child(p)
+	p.bus = music_bus
+	p.volume_db = silence_db
+	return p
 
 func set_mode(mode: int):
-	# ако в момента правим преход и ти извикаш пак set_mode,
-	# запомняме последното желание и го изпълняваме след края
-	if _is_switching:
-		_queued_mode = mode
-		return
-
 	if mode == _current_mode:
 		return
 
@@ -38,13 +39,13 @@ func set_mode(mode: int):
 	if next_stream == null:
 		return
 
-	# ако вече свири същият stream, само запази mode и не рестартирай
-	if _player.playing and _player.stream == next_stream:
+	# ако вече свири същия stream (в активния), не прави нищо
+	if _active.playing and _active.stream == next_stream:
 		_current_mode = mode
 		return
 
 	_current_mode = mode
-	_switch_with_fade(next_stream)
+	_crossfade_to(next_stream)
 
 func _stream_for_mode(mode: int) -> AudioStream:
 	match mode:
@@ -53,45 +54,30 @@ func _stream_for_mode(mode: int) -> AudioStream:
 		MusicMode.PUZZLE: return puzzle_music
 		_: return null
 
-func _switch_with_fade(next_stream: AudioStream):
-	_is_switching = true
+func _crossfade_to(next_stream: AudioStream):
 	_kill_tween()
 
-	# ако нищо не свири, директно fade-in
-	if not _player.playing or _player.stream == null:
-		_player.stream = next_stream
-		_player.volume_db = silence_db
-		_player.play()
-		_tween = create_tween()
-		_tween.tween_property(_player, "volume_db", base_volume_db, fade_time)
-		_tween.finished.connect(_on_fade_finished)
-		return
+	# Подготви inactive да пусне новата музика тихо
+	_inactive.stop()
+	_inactive.stream = next_stream
+	_inactive.volume_db = silence_db
+	_inactive.play()
 
-	# fade-out -> смяна -> fade-in
+	# Tween: новата влиза, старата излиза (едновременно)
 	_tween = create_tween()
-	_tween.tween_property(_player, "volume_db", silence_db, fade_time)
+	_tween.set_trans(Tween.TRANS_SINE)     # по-мек преход
+	_tween.set_ease(Tween.EASE_IN_OUT)
 
-	_tween.tween_callback(func ():
-		_player.stop()
-		_player.stream = next_stream
-		_player.volume_db = silence_db
-		_player.play()
+	_tween.parallel().tween_property(_inactive, "volume_db", base_volume_db, fade_time)
+	_tween.parallel().tween_property(_active, "volume_db", silence_db, fade_time)
+
+	_tween.finished.connect(func ():
+		_active.stop()
+		# разменяме ролите
+		var tmp = _active
+		_active = _inactive
+		_inactive = tmp
 	)
-
-	_tween.tween_property(_player, "volume_db", base_volume_db, fade_time)
-	_tween.finished.connect(_on_fade_finished)
-
-func _on_fade_finished():
-	_is_switching = false
-	_kill_tween()
-
-	# ако междувременно е поискан друг mode, изпълни го
-	if _queued_mode != -1 and _queued_mode != _current_mode:
-		var m := _queued_mode
-		_queued_mode = -1
-		set_mode(m)
-	else:
-		_queued_mode = -1
 
 func _kill_tween():
 	if _tween and is_instance_valid(_tween):

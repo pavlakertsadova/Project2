@@ -10,3 +10,5 @@ script = ExtResource("1_yq78e")
 menu_music = ExtResource("2_ncvnl")
 main_music = ExtResource("3_x8qvj")
 puzzle_music = ExtResource("4_vbys1")
+base_volume_db = -14.0
+fade_time = 2.0
