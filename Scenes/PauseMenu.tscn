@@ -1,0 +1,197 @@
+[gd_scene load_steps=15 format=3 uid="uid://cqrm6abhwsr6f"]
+
+[ext_resource type="Script" uid="uid://b8mygmdfevb6h" path="res://Scenes/pause_menu.gd" id="1_lj4oq"]
+[ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_qwhev"]
+[ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="3_5w4ur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwhev"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w4ur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey1tb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_siy43"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxrls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj4oq"]
+bg_color = Color(0.894118, 0.921569, 0.878431, 0.537255)
+corner_detail = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w4ur"]
+content_margin_left = 28.0
+content_margin_top = 28.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("3_5w4ur")
+texture_margin_top = 0.250755
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(-0.498917, 129.073, 63.9783, 110.503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w4ur"]
+atlas = ExtResource("2_qwhev")
+region = Rect2(385.437, 33.0035, 94.6358, 7.03374)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey1tb"]
+atlas = ExtResource("2_qwhev")
+region = Rect2(384.273, 32.4925, 91.119, 6.71403)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siy43"]
+atlas = ExtResource("2_qwhev")
+region = Rect2(288.275, 33.3547, 7.67316, 93.6767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxrls"]
+atlas = ExtResource("2_qwhev")
+region = Rect2(344.054, 31.225, 7.67316, 97.833)
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_lj4oq")
+
+[node name="PauseButton" type="Button" parent="."]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -43.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_qwhev")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5w4ur")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lj4oq")
+text = "⏸"
+icon_alignment = 2
+
+[node name="FramePanel" type="Panel" parent="."]
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(1640, 1200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="FramePanel"]
+process_mode = 3
+custom_minimum_size = Vector2(1580, 1140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5w4ur")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FramePanel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -520.0
+offset_right = 540.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Resume"
+
+[node name="MusicButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Music: ON"
+
+[node name="SFXButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "SFX: ON"
+
+[node name="QuitButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="Control" type="Control" parent="FramePanel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Top" type="TextureRect" parent="FramePanel/Control"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_5w4ur")
+stretch_mode = 1
+
+[node name="Bottom" type="TextureRect" parent="FramePanel/Control"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_ey1tb")
+stretch_mode = 1
+
+[node name="Left" type="TextureRect" parent="FramePanel/Control"]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_siy43")
+stretch_mode = 1
+
+[node name="Right" type="TextureRect" parent="FramePanel/Control"]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_yxrls")
+stretch_mode = 1
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="FramePanel/Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="FramePanel/Panel/VBoxContainer/MusicButton" to="." method="_on_music_button_pressed"]
+[connection signal="pressed" from="FramePanel/Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

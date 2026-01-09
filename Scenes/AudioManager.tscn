@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b3eaibbda2xrv" path="res://Audio/puzzle.ogg" id="4_vbys1"]
 
 [node name="AudioManager" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_yq78e")
 menu_music = ExtResource("2_ncvnl")
 main_music = ExtResource("3_x8qvj")

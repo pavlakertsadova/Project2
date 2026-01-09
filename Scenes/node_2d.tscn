@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://bh7nudw6bjfgl"]
+[gd_scene load_steps=55 format=4 uid="uid://bh7nudw6bjfgl"]
 
 [ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="1_4d7sh"]
 [ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://Scenes/node_2d.gd" id="1_he4j0"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://xj281jmw31th" path="res://Scenes/door_7.gd" id="20_1nvmp"]
 [ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://Scenes/door_8.gd" id="21_el1jj"]
 [ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://Scenes/door_9.gd" id="22_03fgm"]
+[ext_resource type="PackedScene" uid="uid://cqrm6abhwsr6f" path="res://Scenes/PauseMenu.tscn" id="23_uu23e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8dv2"]
 texture = ExtResource("1_v7gqg")
@@ -2805,5 +2806,7 @@ position = Vector2(516, 1877)
 
 [node name="Checkpoint_9" type="Node2D" parent="."]
 position = Vector2(754, 2177)
+
+[node name="PauseMenu" parent="." instance=ExtResource("23_uu23e")]
 
 [connection signal="body_entered" from="closedDoors/door2/`door2" to="closedDoors/door2/`door2" method="_on_body_entered"]
