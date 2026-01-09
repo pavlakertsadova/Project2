@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cqrm6abhwsr6f"]
 
-[ext_resource type="Script" uid="uid://b8mygmdfevb6h" path="res://Scenes/pause_menu.gd" id="1_lj4oq"]
+[ext_resource type="Script" uid="uid://b8mygmdfevb6h" path="res://scenes/pause_menu.gd" id="1_lj4oq"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_qwhev"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="3_5w4ur"]
 [ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_ey1tb"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dywkfuf3vmenm"]
 
-[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://Scenes/MainMenu.gd" id="1_853f1"]
+[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://scenes/MainMenu.gd" id="1_853f1"]
 [ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="3_8saeu"]
 
@@ -51,13 +51,13 @@ scale = Vector2(5.44763, 6.34657)
 layout_mode = 2
 text = "START GAME"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "EXIT"
-
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -104,6 +104,6 @@ offset_bottom = 8.0
 text = "BACK"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/BackButton" to="." method="_on_back_button_pressed"]
