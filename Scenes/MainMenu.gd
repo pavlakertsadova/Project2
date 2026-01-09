@@ -5,6 +5,9 @@ extends Control
 @onready var settings_menu = $SettingsMenu  # Панелът с настройките
 
 func _ready():
+	# Уверяваме се, че при старт настройките са скрити
+	settings_menu.visible = false
+	menu_buttons.visible = true
 	AudioManager.set_mode(AudioManager.MusicMode.MENU)
 	# Уверяваме се, че при старт настройките са скрити
 	settings_menu.visible = false
