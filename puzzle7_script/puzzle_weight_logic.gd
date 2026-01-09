@@ -8,6 +8,7 @@ var puzzle_solved := false
 func _ready():
 	for plate in plates:
 		plate.plate_changed.connect(check_puzzle)
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 	check_puzzle()
 

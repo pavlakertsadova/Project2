@@ -7,6 +7,7 @@ func _ready():
 	# Скриваме етикета при старт, ако съществува
 	if has_node("Label"):
 		$Label.visible = false
+	AudioManager.set_mode(AudioManager.MusicMode.PUZZLE)
 
 # Тази функция се вика от Гроба
 func activate_stone():
