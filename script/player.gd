@@ -9,6 +9,8 @@ var can_move = true
 enum Direction {NONE, UP, DOWN, RIGHT, LEFT}
 var facing_direction = Direction.NONE
 
+@onready var light: PointLight2D = $PointLight2D
+
 @onready var pickup_area: Area2D = $PickupArea2D
 var carried_object: WeightObject = null
 var nearby_object: WeightObject = null
@@ -22,6 +24,7 @@ func _ready():
 	pickup_area.body_exited.connect(_on_pickup_body_exited)
 	facing_direction = Direction.DOWN
 	update_carry_point()
+	light.enabled = false
 
 func _physics_process(_delta: float) -> void:
 	if not can_move:
@@ -120,3 +123,6 @@ func _on_pickup_body_entered(area):
 func _on_pickup_body_exited(area):
 	if area.get_parent() == nearby_object:
 		nearby_object = null
+
+func _set_light_enable(value: bool):
+	light.enabled = value

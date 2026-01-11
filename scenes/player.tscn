@@ -1,6 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://dxfe3v6h758r0"]
+[gd_scene load_steps=54 format=3 uid="uid://dxfe3v6h758r0"]
 
-[ext_resource type="Script" uid="uid://7q4a4anb62fc" path="res://Script/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://7q4a4anb62fc" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bhwt1kiot67a3" path="res://Assets/elements-supremacy-spritesheets/spaghetti_atlas.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
@@ -390,6 +390,20 @@ height = 24.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 3.44592
 
+[sub_resource type="Gradient" id="Gradient_g2els"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.279, 0.279, 0.279, 0.4, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qhqgy"]
+gradient = SubResource("Gradient_g2els")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 6
 script = ExtResource("1_g2els")
@@ -415,3 +429,12 @@ shape = SubResource("CircleShape2D_g2els")
 
 [node name="CarryPoint" type="Node2D" parent="."]
 position = Vector2(45, 6)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.992157, 1, 0.717647, 0.678431)
+energy = 1.1
+shadow_enabled = true
+shadow_color = Color(0.156863, 0.156863, 0.156863, 0.631373)
+shadow_filter_smooth = 3.9
+texture = SubResource("GradientTexture2D_qhqgy")
+texture_scale = 1.5
