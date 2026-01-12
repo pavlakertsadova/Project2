@@ -1,8 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dywkfuf3vmenm"]
+[gd_scene load_steps=14 format=3 uid="uid://dywkfuf3vmenm"]
 
-[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://scenes/MainMenu.gd" id="1_853f1"]
+[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://Scenes/MainMenu.gd" id="1_853f1"]
 [ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="3_8saeu"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8saeu"]
+blend_mode = 3
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8saeu"]
 
@@ -68,6 +71,17 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tt5f1")
 expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_8saeu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.632026, 0.390037, 0.0504577, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

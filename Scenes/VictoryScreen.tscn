@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://bvsfm8vxvkj10"]
+
+[ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_2n4xq"]
+[ext_resource type="Script" uid="uid://d2pisytj8rv8n" path="res://Scenes/victory_screen.gd" id="1_8kq2x"]
+[ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="2_rc3hl"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2n4xq"]
+blend_mode = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_8kq2x"]
+font = ExtResource("2_rc3hl")
+font_size = 28
+outline_size = 4
+outline_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rc3hl"]
+font = ExtResource("2_rc3hl")
+font_size = 28
+outline_size = 6
+outline_color = Color(0.00960463, 0.00960463, 0.00960463, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rc3hl"]
+bg_color = Color(0.307994, 0.146871, 0.0212225, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kq2x"]
+bg_color = Color(0.289899, 0.136929, 0.0151837, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mj8m"]
+bg_color = Color(0.36027, 0.213447, 0.0442686, 1)
+border_color = Color(0.222449, 0.0958937, 0.00263905, 1)
+border_blend = true
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8kq2x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2n4xq")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_2n4xq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.774963, 0.518612, 0.27625, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 443.0
+offset_right = 1653.0
+offset_bottom = 529.0
+scale = Vector2(7.36, 9)
+pivot_offset = Vector2(360, 43)
+text = "CONGRATULATIONS!"
+label_settings = SubResource("LabelSettings_8kq2x")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 500.0
+offset_right = 455.0
+offset_bottom = 538.0
+scale = Vector2(6.28, 8.6)
+text = "YOU ESCAPED  THE  MAZE!"
+label_settings = SubResource("LabelSettings_rc3hl")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 927.0
+offset_right = 1249.0
+offset_bottom = 958.0
+scale = Vector2(3.53042, 4.03823)
+theme_override_styles/hover = SubResource("StyleBoxFlat_rc3hl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8kq2x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mj8m")
+text = "TRY AGAIN"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1230.0
+offset_top = 1125.0
+offset_right = 1271.0
+offset_bottom = 1156.0
+scale = Vector2(4.24001, 3.32)
+theme_override_styles/hover = SubResource("StyleBoxFlat_rc3hl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8kq2x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mj8m")
+text = "EXIT"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

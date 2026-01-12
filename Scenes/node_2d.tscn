@@ -2618,7 +2618,7 @@ script = ExtResource("1_he4j0")
 
 [node name="player" parent="." instance=ExtResource("1_4d7sh")]
 z_index = 20
-position = Vector2(408, 3438)
+position = Vector2(409, 3443)
 scale = Vector2(1.07685, 1.24997)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -3005,7 +3005,7 @@ position = Vector2(-350, 2112)
 position = Vector2(166, 1955)
 
 [node name="Checkpoint_7" type="Node2D" parent="."]
-position = Vector2(273, 1000)
+position = Vector2(211, -165)
 
 [node name="Checkpoint_8" type="Node2D" parent="."]
 position = Vector2(514, 1853)

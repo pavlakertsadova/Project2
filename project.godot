@@ -22,6 +22,13 @@ Global="*res://Global.gd"
 AudioManager="*res://Scenes/AudioManager.tscn"
 PauseMenu="*res://Scenes/PauseMenu.tscn"
 
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [input]
 
 move_left={
