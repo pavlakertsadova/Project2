@@ -1,29 +1,29 @@
 [gd_scene load_steps=60 format=4 uid="uid://bh7nudw6bjfgl"]
 
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="1_4d7sh"]
-[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://scenes/node_2d.gd" id="1_he4j0"]
-[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://scenes/`door_2.gd" id="1_p20hg"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="1_4d7sh"]
+[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://Scenes/node_2d.gd" id="1_he4j0"]
+[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://Scenes/`door_2.gd" id="1_p20hg"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="1_v7gqg"]
 [ext_resource type="Texture2D" uid="uid://bp7b1hou08nlw" path="res://Assets/TX Props with Shadow.png" id="2_85gyg"]
 [ext_resource type="Texture2D" uid="uid://dde47gxl708i4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Struct.png" id="2_chwn1"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_hvaui"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="4_2ooml"]
-[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://scenes/door_3.gd" id="4_fg7i4"]
+[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://Scenes/door_3.gd" id="4_fg7i4"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_p20hg"]
 [ext_resource type="Texture2D" uid="uid://b0eef2auba37w" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow.png" id="6_he4j0"]
 [ext_resource type="Texture2D" uid="uid://bdv0m6vn3j3ws" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow Plant.png" id="7_85gyg"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="8_c32x4"]
-[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://scenes/enemy.tscn" id="10_hvaui"]
-[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://script/door.gd" id="10_p20hg"]
-[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://scenes/GameManager.tscn" id="15_c32x4"]
-[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://scenes/door_4.gd" id="17_gwne5"]
-[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://scenes/door_5.gd" id="18_hpu6p"]
-[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://scenes/door_6.gd" id="19_op2xg"]
-[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://scenes/door_7.gd" id="20_1nvmp"]
-[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://scenes/door_8.gd" id="21_el1jj"]
-[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://scenes/door_9.gd" id="22_03fgm"]
-[ext_resource type="PackedScene" uid="uid://cqrm6abhwsr6f" path="res://scenes/PauseMenu.tscn" id="23_uu23e"]
-[ext_resource type="Script" uid="uid://ps7ujq7judhk" path="res://scenes/minimap.gd" id="24_2sxpt"]
+[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://Scenes/enemy.tscn" id="10_hvaui"]
+[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://Script/door.gd" id="10_p20hg"]
+[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://Scenes/GameManager.tscn" id="15_c32x4"]
+[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://Scenes/door_4.gd" id="17_gwne5"]
+[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://Scenes/door_5.gd" id="18_hpu6p"]
+[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://Scenes/door_6.gd" id="19_op2xg"]
+[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://Scenes/door_7.gd" id="20_1nvmp"]
+[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://Scenes/door_8.gd" id="21_el1jj"]
+[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://Scenes/door_9.gd" id="22_03fgm"]
+[ext_resource type="PackedScene" uid="uid://cqrm6abhwsr6f" path="res://Scenes/PauseMenu.tscn" id="23_uu23e"]
+[ext_resource type="Script" uid="uid://ps7ujq7judhk" path="res://Scenes/minimap.gd" id="24_2sxpt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8dv2"]
 texture = ExtResource("1_v7gqg")
@@ -2618,7 +2618,7 @@ script = ExtResource("1_he4j0")
 
 [node name="player" parent="." instance=ExtResource("1_4d7sh")]
 z_index = 20
-position = Vector2(408, 3391)
+position = Vector2(408, 3438)
 scale = Vector2(1.07685, 1.24997)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -2665,11 +2665,11 @@ tile_map_data = PackedByteArray("AAALAAwAAAAWAAsAAAAMAAwAAAAXAAsAAAANAA0AAAAYAAw
 tile_set = SubResource("TileSet_epypp")
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("player", "closed_doors", "open_doors") instance=ExtResource("15_c32x4")]
-position = Vector2(-321, -327)
+position = Vector2(-322, -327)
 player = NodePath("../player")
 closed_doors = [NodePath("../closedDoors/door1"), NodePath("../closedDoors/door2"), NodePath("../closedDoors/door3"), NodePath("../closedDoors/door4"), NodePath("../closedDoors/door5"), NodePath("../closedDoors/door6"), NodePath("../closedDoors/door7"), NodePath("../closedDoors/door8"), NodePath("../closedDoors/door9")]
 open_doors = [NodePath("../openDoors/openDoor1"), NodePath("../openDoors/openDoor2"), NodePath("../openDoors/openDoor3"), NodePath("../openDoors/openDoor4"), NodePath("../openDoors/openDoor5"), NodePath("../openDoors/openDoor6"), NodePath("../openDoors/openDoor7"), NodePath("../openDoors/openDoor8"), NodePath("../openDoors/openDoor9")]
-spawn_positions = Array[Vector2]([Vector2(162, 2473), Vector2(-535, 1863), Vector2(506, 1988), Vector2(533, 2694), Vector2(-595, 1234), Vector2(-78, 1069), Vector2(513, 1280), Vector2(269, 971), Vector2(24, 93)])
+spawn_positions = Array[Vector2]([Vector2(162, 2473), Vector2(-535, 1863), Vector2(506, 1988), Vector2(533, 2694), Vector2(-595, 1234), Vector2(-78, 1069), Vector2(513, 1280), Vector2(514, 1831), Vector2(24, 93)])
 
 [node name="enemies" type="Node" parent="."]
 
@@ -3008,7 +3008,7 @@ position = Vector2(166, 1955)
 position = Vector2(273, 1000)
 
 [node name="Checkpoint_8" type="Node2D" parent="."]
-position = Vector2(516, 1877)
+position = Vector2(514, 1853)
 
 [node name="Checkpoint_9" type="Node2D" parent="."]
 position = Vector2(754, 2177)
