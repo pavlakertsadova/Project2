@@ -14,7 +14,7 @@ var main_scene_path = "res://Scenes/node_2d.tscn"
 
 var player_in_zone := false
 var stop_time := 0.0
-const REQUIRED_STOP_TIME := 2.0
+const REQUIRED_STOP_TIME := 0.7
 
 var movement_part_done := false
 

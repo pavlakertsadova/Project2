@@ -3034,15 +3034,16 @@ size_flags_vertical = 4
 
 [node name="SubViewport" type="SubViewport" parent="minimap/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(180, 180)
+size = Vector2i(540, 540)
 render_target_update_mode = 4
 script = ExtResource("24_2sxpt")
 
 [node name="Camera2D" type="Camera2D" parent="minimap/SubViewportContainer/SubViewport"]
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.5, 0.5)
 
 [node name="Line2D" type="Line2D" parent="minimap/SubViewportContainer"]
-points = PackedVector2Array(-2, -2, -2, 182, 182, 182, 182, -2, 6, -2)
+scale = Vector2(1.62515, 1.32705)
+points = PackedVector2Array(-2, -2, -2, 182, 0, 403.903, 329.816, 403.903, 329.816, 0, 182, -2, 6, -2)
 closed = true
 width = 6.0
 default_color = Color(0.353, 0.193, 0.012, 0.928)
@@ -3053,6 +3054,7 @@ sharp_limit = 0.5
 round_precision = 5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.325441, 0.325441, 0.325441, 1)
 
 [connection signal="body_entered" from="closedDoors/door2/`door2" to="closedDoors/door2/`door2" method="_on_body_entered"]

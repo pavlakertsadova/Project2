@@ -23,9 +23,9 @@ var blinking_started := false
 var player_in_range := false
 var texts = [
 	"Press [E] to interact.",
-	"Exactly one of the four is lying.\nThe liar's plate is safe to be pressed.\n [E] to continue",
-	"North: South is telling the truth.\nSouth: East is telling the truth.\nEast: West is the right plate\nWest: North is lying",
-	"To choose an answer stand on the plate and press [E]"
+	"Exactly one of the four is lying.\nThe liar's plate is safe to be pressed.\n\n [1/3]",
+	"North: South is telling the truth.\n\nSouth: East is telling the truth.\n\nEast: West is the right plate.\n\nWest: North is lying\n\n [2/3]",
+	"To choose an answer --> stand on the plate and PRESS [E]\n\n [3/3]"
 ]
 var texts_index = 0
 var text_change = false
