@@ -73,9 +73,10 @@ func _on_answer_edit_text_submitted(new_text: String) -> void:
 	var answer := new_text.strip_edges().to_lower()
 
 	var correct_answers := [
-		"eyes",
-		"eye",
-		"your eyes"
+		"echo",
+		"an echo",
+		"the echo",
+		"echoes"
 	]
 	if answer in correct_answers:
 		feedback_label.text = "Correct!"

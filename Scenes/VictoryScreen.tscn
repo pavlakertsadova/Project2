@@ -96,13 +96,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -333.0
-offset_top = 72.0001
-offset_right = 61.0
-offset_bottom = 206.0
+offset_left = -412.0
+offset_top = 39.0
+offset_right = -18.0
+offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.83263, 3.37957)
+scale = Vector2(2.25037, 3.66868)
 theme_override_constants/separation = 20
 
 [node name="Button" type="Button" parent="VBoxContainer"]

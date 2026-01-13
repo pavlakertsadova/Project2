@@ -84,7 +84,7 @@ func _on_answer_submitted(text: String) -> void:
 
 	# правилен отговор за тази гатанка:
 	# "keyboard"
-	if answer == "keyboard" or answer == "a keyboard":
+	if answer == "keyboard" or answer == "a keyboard" or answer == "keyboards":
 		Global.level_progress["puzzle6"] = true
 		Global.last_solved_puzzle = "puzzle6"
 		Global.checkpoint_id = "Checkpoint_6"

@@ -1,10 +1,12 @@
 extends Node
 
-enum MusicMode { MENU, MAIN, PUZZLE }
+var _force_instant := false
+enum MusicMode { MENU, MAIN, PUZZLE, FINAL }
 
 @export var menu_music: AudioStream
 @export var main_music: AudioStream
 @export var puzzle_music: AudioStream
+@export var final_music: AudioStream
 
 @export var music_bus := "Music"
 @export var base_volume_db := -10.0      # малко по-тихо = по-приятно
@@ -23,6 +25,7 @@ func _ready():
 	_b = _make_player()
 	_active = _a
 	_inactive = _b
+	AudioManager.set_final_instant()
 
 func _make_player() -> AudioStreamPlayer:
 	var p := AudioStreamPlayer.new()
@@ -46,15 +49,27 @@ func set_mode(mode: int):
 
 	_current_mode = mode
 	_crossfade_to(next_stream)
+	
+func set_final_instant():
+	_force_instant = true
+	set_mode(MusicMode.FINAL)
 
 func _stream_for_mode(mode: int) -> AudioStream:
 	match mode:
 		MusicMode.MENU:   return menu_music
 		MusicMode.MAIN:   return main_music
 		MusicMode.PUZZLE: return puzzle_music
+		MusicMode.FINAL: return final_music
 		_: return null
 
 func _crossfade_to(next_stream: AudioStream):
+	if _force_instant:
+		_force_instant = false
+		_active.stop()
+		_active.stream = next_stream
+		_active.volume_db = base_volume_db
+		_active.play()
+		return
 	_kill_tween()
 
 	# Подготви inactive да пусне новата музика тихо

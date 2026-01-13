@@ -2517,23 +2517,24 @@ zoom = Vector2(3, 3)
 
 [node name="RiddleLabel" type="Label" parent="."]
 visible = false
-offset_left = -192.0
-offset_top = 256.0
-offset_right = 150.0
-offset_bottom = 331.0
+offset_left = -218.0
+offset_top = 233.0
+offset_right = 166.0
+offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("9_wykeh")
-text = "I am always in front of you.
-You use me to see.
+text = "I speak without 
+a mouth and
+ hear without ears.
 What am I?"
 horizontal_alignment = 1
 
 [node name="IntroLabel" type="Label" parent="."]
-offset_left = -203.0
+offset_left = -202.0
 offset_top = 216.0
-offset_right = 147.0
-offset_bottom = 270.0
+offset_right = 148.0
+offset_bottom = 289.0
 theme_override_fonts/font = ExtResource("9_wykeh")
-text = "Touch wnat 
+text = "Touch what 
 you see
 the most
 (Press E)"
@@ -2545,9 +2546,9 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="AnswerEdit" type="LineEdit" parent="."]
-offset_left = -65.0
-offset_top = 371.0
-offset_right = 3.5625
-offset_bottom = 402.0
+offset_left = -63.0
+offset_top = 315.0
+offset_right = 5.5625
+offset_bottom = 346.0
 
 [connection signal="text_submitted" from="AnswerEdit" to="." method="_on_answer_edit_text_submitted"]

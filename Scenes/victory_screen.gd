@@ -1,5 +1,6 @@
 extends Control
 func _ready():
+	AudioManager.set_mode(AudioManager.MusicMode.FINAL)
 	# --- 1. ПЪРВИЯТ НАДПИС ---
 	# Върнахме се към $Label, защото вече не е в контейнера
 	var label1 = $Label 
