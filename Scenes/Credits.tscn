@@ -1,0 +1,126 @@
+[gd_scene load_steps=11 format=3 uid="uid://ngupgxmm6gh3"]
+
+[ext_resource type="Script" uid="uid://bwus7deh3k6dr" path="res://Scenes/credits.gd" id="1_7xmno"]
+[ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_xbebw"]
+[ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="2_7xmno"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f64u0"]
+font = ExtResource("2_7xmno")
+font_size = 128
+outline_size = 6
+outline_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uy3b0"]
+font_size = 64
+outline_size = 4
+outline_color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iynit"]
+font_size = 32
+outline_size = 4
+outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lpub1"]
+font_size = 64
+outline_size = 4
+outline_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640q4"]
+bg_color = Color(0.307994, 0.146871, 0.0212225, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qoai"]
+bg_color = Color(0.289899, 0.136929, 0.0151837, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpdlp"]
+bg_color = Color(0.36027, 0.213447, 0.0442686, 1)
+border_color = Color(0.222449, 0.0958937, 0.00263905, 1)
+border_blend = true
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7xmno")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xbebw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7xmno")
+theme_override_font_sizes/font_size = 124
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_f64u0")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "CREATED BY: "
+label_settings = SubResource("LabelSettings_uy3b0")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Erik Samodivkin
+Pavla Kertsadova
+Polina Dimitrova"
+label_settings = SubResource("LabelSettings_iynit")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "ASSETS & FONTS:"
+label_settings = SubResource("LabelSettings_lpub1")
+horizontal_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "Cainos - Pixel Art Top Down"
+uri = "https://cainos.itch.io/pixel-art-top-down-basic"
+
+[node name="LinkButton2" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Zenitha Classic Font"
+uri = "https://www.dafont.com/de/zenitha-classic.font"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_640q4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5qoai")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpdlp")
+text = "BACK"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
