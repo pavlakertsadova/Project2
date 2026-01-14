@@ -46,7 +46,7 @@ func update_symbols() -> void:
 
 	# -------- ЕТАП 2 --------
 	elif stage == 1:
-		if not A and B and C:
+		if A and B and not C:
 			unlock_symbol("C")
 			unlock_symbol("S")
 			stage = 2
@@ -55,11 +55,11 @@ func update_symbols() -> void:
 
 	# -------- ЕТАП 3 --------
 	elif stage == 2:
-		if A and B and not C:
+		if not A and B and C:
 			unlock_symbol("H")
 			unlock_symbol("T")
 			stage = 3
-			await get_tree().create_timer(0.4).timeout
+			await get_tree().create_timer(0.8).timeout
 			reset_levers()
 			
 			chest.set_active(true)

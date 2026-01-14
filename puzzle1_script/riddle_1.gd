@@ -28,7 +28,6 @@ var texts = [
 	"To choose an answer --> stand on the plate and PRESS [E]\n\n [3/3]"
 ]
 var texts_index = 0
-var text_change = false
 
 func _ready():
 	area.body_entered.connect(_on_body_entered)
@@ -54,32 +53,34 @@ func _on_body_entered(body):
 		interact_label.visible = true
 		texts_index = 0
 		interact_label.text = texts[texts_index]
-		text_change = true
 
 func _on_body_exited(body):
 	if body is Player:
 		player_in_range = false
 		interact_label.visible = false
-		text_change = false
 
 func _input(event):
-	if player_in_range and event.is_action_pressed("interact") and text_change:
-		texts_index +=1
+	if player_in_range and event.is_action_pressed("interact"):
 		interact()
 
 func interact():
-	print("Interacted with", name)
+	print("Interacted with", name, "index:", texts_index)
 	if not blinking_started:
 		for p in blink_players:
 			p.get_parent().visible = true
 			p.play("blink_answers")
 		blinking_started = true
+
+		texts_index = 1
+		interact_label.text = texts[texts_index]
 		return
+
+	texts_index += 1
 	if texts_index < texts.size():
 		interact_label.text = texts[texts_index]
 	else:
 		interact_label.visible = false
-		text_change = false
+
 
 func on_correct_answer(correct_id: String):
 	for i in range(blink_players.size()):
