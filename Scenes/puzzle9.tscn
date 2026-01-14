@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=4 uid="uid://clnxrhuxibs6u"]
 
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="1_116wb"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="1_g6nn8"]
-[ext_resource type="Script" uid="uid://cuscs3p6560sm" path="res://Scenes/puzzle_9.gd" id="1_o47e1"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="1_g6nn8"]
+[ext_resource type="Script" uid="uid://cuscs3p6560sm" path="res://scenes/puzzle_9.gd" id="1_o47e1"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="2_ujtg4"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="3_g6nn8"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="4_8wo1r"]
