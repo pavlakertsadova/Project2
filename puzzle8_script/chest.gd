@@ -4,14 +4,18 @@ extends Node2D
 
 @onready var area := $Area2D
 
+@onready var answer_chest: AudioStreamPlayer2D = $"../rightAnswer"
+
 var active := false
 
 func _ready():
 	area.body_entered.connect(_on_body_entered)
 
 func set_active(value: bool):
+	answer_chest.play()
 	active = value
 	print("Chest active =", active)
+	
 
 func _on_body_entered(body):
 	if body is Player and active:

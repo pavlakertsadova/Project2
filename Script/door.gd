@@ -7,8 +7,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body is Player:
-		_enter_level()
+		area.monitoring = false
+		call_deferred("_enter_level")
 
 func _enter_level():
-	var new_scene = load("res://scenes/puzzle1.tscn")
-	get_tree().change_scene_to_packed(new_scene)
+	get_tree().change_scene_to_file("res://scenes/puzzle1.tscn")

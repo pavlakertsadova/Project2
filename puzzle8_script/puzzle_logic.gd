@@ -4,6 +4,8 @@ extends Node2D
 @onready var symbols = get_node("../Symbols")
 @onready var chest = get_parent().get_node("Chest")
 
+@onready var right_lever: AudioStreamPlayer2D = $"../rightLever"
+
 var stage := 0
 var unlocked := {
 	"C": false,
@@ -43,6 +45,7 @@ func update_symbols() -> void:
 			stage = 1
 			await get_tree().create_timer(0.4).timeout
 			reset_levers()
+			right_lever.play()
 
 	# -------- ЕТАП 2 --------
 	elif stage == 1:
@@ -52,6 +55,7 @@ func update_symbols() -> void:
 			stage = 2
 			await get_tree().create_timer(0.4).timeout
 			reset_levers()
+			right_lever.play()
 
 	# -------- ЕТАП 3 --------
 	elif stage == 2:
@@ -60,6 +64,7 @@ func update_symbols() -> void:
 			unlock_symbol("T")
 			stage = 3
 			await get_tree().create_timer(0.8).timeout
+			right_lever.play()
 			reset_levers()
 			
 			chest.set_active(true)

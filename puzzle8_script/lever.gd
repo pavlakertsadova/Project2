@@ -7,6 +7,8 @@ extends Node2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var label: Label = $Label
 
+@onready var lever_pull: AudioStreamPlayer2D = $"../../lever"
+
 signal lever_toggled(id: String, is_on: bool)
 
 var is_on := false
@@ -35,9 +37,11 @@ func _unhandled_input(event):
 func toggle():
 	is_on = !is_on
 	sprite.flip_v = is_on
+	lever_pull.play()
 	emit_signal("lever_toggled", lever_id, is_on)
 	print("Lever", lever_id, "=", is_on)
 	
 func force_off():
 	is_on = false
 	sprite.flip_v = is_on
+	lever_pull.play()

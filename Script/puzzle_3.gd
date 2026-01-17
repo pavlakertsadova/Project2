@@ -12,6 +12,8 @@ signal puzzle_closed
 @onready var answer_edit: LineEdit = $AnswerEdit
 @onready var feedback_label: Label = $FeedbackLabel
 
+@onready var sfx_door: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 var can_interact := false
 var riddle_open := false
 
@@ -93,6 +95,8 @@ func _on_answer_edit_text_submitted(new_text: String) -> void:
 		Global.last_solved_puzzle = "puzzle3"
 		Global.checkpoint_id = "Checkpoint_3"
 		Global.save_game()
+		sfx_door.play()
+		await get_tree().create_timer(0.15).timeout
 		get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")
 		puzzle_solved.emit()
 	else:

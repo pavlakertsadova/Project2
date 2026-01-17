@@ -10,8 +10,12 @@ extends Node
 @export_group("Spawn Positions")
 @export var spawn_positions: Array[Vector2]
 
+@onready var sfx_door: AudioStreamPlayer2D = $"../openDoors/AudioStreamPlayer2D"
+var play_sfx_door := false
+
 func _ready():
 	Global.load_game()
+	await get_tree().process_frame
 	update_level()
 	await get_tree().physics_frame
 	set_player_spawn()
@@ -43,6 +47,10 @@ func update_level():
 				var door = open_doors[index]
 				if is_instance_valid(door):
 					door.visible = true
+
+					if not play_sfx_door:
+						sfx_door.play()
+						play_sfx_door = true
 
 func set_player_spawn():
 	if Global.checkpoint_id == "" or player == null:

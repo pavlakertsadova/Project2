@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://ccn6d6krdg1tn"]
+[gd_scene load_steps=46 format=4 uid="uid://ccn6d6krdg1tn"]
 
 [ext_resource type="Script" uid="uid://d1d35p7c4xdpw" path="res://puzzle1_script/riddle_manager.gd" id="1_aan77"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_d7vh0"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="4_j46pd"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_mjqgh"]
 [ext_resource type="Script" uid="uid://smw55y8cml7m" path="res://puzzle1_script/riddle_1.gd" id="6_voev6"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_j46pd"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_j46pd"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_mjqgh"]
 [ext_resource type="Script" uid="uid://cmr7ox46sdu3r" path="res://puzzle1_script/north.gd" id="9_b4bn3"]
 [ext_resource type="Script" uid="uid://c15oriakiu5jk" path="res://puzzle1_script/south.gd" id="10_rih6e"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bu50lswt3oayr" path="res://puzzle1_script/west.gd" id="11_eso5p"]
 [ext_resource type="Script" uid="uid://3af4jlr4x62n" path="res://puzzle1_script/answer.gd" id="12_lfoye"]
 [ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="14_2kv06"]
+[ext_resource type="AudioStream" uid="uid://c8yubi7eymuar" path="res://Audio/door_unlock.mp3" id="14_683ma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfoye"]
 texture = ExtResource("4_j46pd")
@@ -1712,6 +1713,9 @@ script = ExtResource("12_lfoye")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer/Area2D"]
 position = Vector2(-48.5, 35)
 shape = SubResource("RectangleShape2D_eso5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Answer"]
+stream = ExtResource("14_683ma")
 
 [node name="player" parent="." instance=ExtResource("7_j46pd")]
 z_index = 6

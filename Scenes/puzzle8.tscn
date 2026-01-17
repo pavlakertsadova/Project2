@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://xreljfncslfj"]
+[gd_scene load_steps=50 format=4 uid="uid://xreljfncslfj"]
 
 [ext_resource type="Script" uid="uid://dj4g80vnqf3da" path="res://puzzle8_script/puzzle_8.gd" id="1_a6382"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="2_0lqj1"]
@@ -9,9 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="4_npjcu"]
 [ext_resource type="Texture2D" uid="uid://dujoul3a3et2f" path="res://Assets/lever.png" id="5_npjcu"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_npjcu"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_owr0o"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_owr0o"]
 [ext_resource type="Texture2D" uid="uid://demmybqs8hxgk" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Player.png" id="7_pbb64"]
 [ext_resource type="Script" uid="uid://cr1cey3fj8a5r" path="res://puzzle8_script/chest.gd" id="11_b4t1s"]
+[ext_resource type="AudioStream" uid="uid://cw00jo0wr411n" path="res://Audio/lever_pull.mp3" id="11_irkub"]
+[ext_resource type="AudioStream" uid="uid://c0vktr0cp2o1a" path="res://Audio/right_answer.mp3" id="14_kxg1i"]
+[ext_resource type="AudioStream" uid="uid://kal6dwihlqlv" path="res://Audio/right_lever.mp3" id="15_h4uq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npjcu"]
 texture = ExtResource("2_0lqj1")
@@ -2100,3 +2103,12 @@ label_settings = SubResource("LabelSettings_f0x01")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="lever" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_irkub")
+
+[node name="rightAnswer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_kxg1i")
+
+[node name="rightLever" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_h4uq4")
