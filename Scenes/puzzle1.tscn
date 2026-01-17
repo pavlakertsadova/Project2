@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="4_j46pd"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_mjqgh"]
 [ext_resource type="Script" uid="uid://smw55y8cml7m" path="res://puzzle1_script/riddle_1.gd" id="6_voev6"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_j46pd"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_j46pd"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_mjqgh"]
 [ext_resource type="Script" uid="uid://cmr7ox46sdu3r" path="res://puzzle1_script/north.gd" id="9_b4bn3"]
 [ext_resource type="Script" uid="uid://c15oriakiu5jk" path="res://puzzle1_script/south.gd" id="10_rih6e"]

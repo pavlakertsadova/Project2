@@ -1,16 +1,16 @@
 [gd_scene load_steps=29 format=4 uid="uid://v8j1bfp7kate"]
 
-[ext_resource type="Script" uid="uid://e51vavaulq2v" path="res://script/puzzle_2.gd" id="1_3lbq2"]
+[ext_resource type="Script" uid="uid://e51vavaulq2v" path="res://Script/puzzle_2.gd" id="1_3lbq2"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="2_p66xg"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_883m3"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="4_7cckq"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="5_i1xga"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="6_0fl48"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_7jgaq"]
-[ext_resource type="Script" uid="uid://108d48snew40" path="res://scenes/chest_trigger.gd" id="8_883m3"]
-[ext_resource type="Script" uid="uid://b2smepf03ud8c" path="res://scenes/bench_trigger.gd" id="9_7cckq"]
-[ext_resource type="Script" uid="uid://co2gluuqgnncn" path="res://scenes/barrel_trigger.gd" id="10_i1xga"]
-[ext_resource type="Script" uid="uid://dstjqkjulhdlu" path="res://scenes/vase_trigger.gd" id="11_0fl48"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_7jgaq"]
+[ext_resource type="Script" uid="uid://108d48snew40" path="res://Scenes/chest_trigger.gd" id="8_883m3"]
+[ext_resource type="Script" uid="uid://b2smepf03ud8c" path="res://Scenes/bench_trigger.gd" id="9_7cckq"]
+[ext_resource type="Script" uid="uid://co2gluuqgnncn" path="res://Scenes/barrel_trigger.gd" id="10_i1xga"]
+[ext_resource type="Script" uid="uid://dstjqkjulhdlu" path="res://Scenes/vase_trigger.gd" id="11_0fl48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p248n"]
 texture = ExtResource("2_p66xg")
