@@ -25,7 +25,6 @@ func _ready():
 	_b = _make_player()
 	_active = _a
 	_inactive = _b
-	AudioManager.set_final_instant()
 
 func _make_player() -> AudioStreamPlayer:
 	var p := AudioStreamPlayer.new()
