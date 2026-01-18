@@ -11,4 +11,4 @@ func _on_body_entered(body):
 		call_deferred("_enter_level")
 
 func _enter_level():
-	get_tree().change_scene_to_file("res://scenes/puzzle1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/puzzle1.tscn")

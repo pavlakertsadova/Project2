@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var next_scene := "res://scenes/node_2d.tscn"
+@export var next_scene := "res://Scenes/node_2d.tscn"
 
 @onready var area := $Area2D
 

@@ -24,8 +24,9 @@ PauseMenu="*res://Scenes/PauseMenu.tscn"
 
 [display]
 
-window/size/viewport_width=2560
-window/size/viewport_height=1440
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [input]
 

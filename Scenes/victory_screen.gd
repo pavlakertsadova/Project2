@@ -24,7 +24,7 @@ func _ready():
 	
 func _on_button_pressed():
 	# Връща към главното меню (провери дали пътят е верен!)
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 
 func _on_button_2_pressed():

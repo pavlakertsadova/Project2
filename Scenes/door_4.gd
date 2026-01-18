@@ -10,5 +10,5 @@ func _on_body_entered(body):
 		_enter_level()
 
 func _enter_level():
-	var new_scene = load("res://scenes/puzzle4.tscn")
+	var new_scene = load("res://Scenes/puzzle4.tscn")
 	get_tree().change_scene_to_packed(new_scene)
