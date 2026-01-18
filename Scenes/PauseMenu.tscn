@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cqrm6abhwsr6f"]
 
-[ext_resource type="Script" uid="uid://b8mygmdfevb6h" path="res://scenes/pause_menu.gd" id="1_lj4oq"]
+[ext_resource type="Script" uid="uid://b8mygmdfevb6h" path="res://Scenes/pause_menu.gd" id="1_lj4oq"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_qwhev"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="3_5w4ur"]
 [ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_ey1tb"]
@@ -146,22 +146,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gqxqw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gqxqw")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gqxqw")
 text = "Music: ON"
-
-[node name="SFXButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
-custom_minimum_size = Vector2(1080, 200)
-layout_mode = 2
-theme_override_colors/font_disabled_color = Color(0.458824, 0.458824, 0.458824, 1)
-theme_override_colors/font_hover_color = Color(0.458824, 0.458824, 0.458824, 1)
-theme_override_colors/font_color = Color(0.458824, 0.458824, 0.458824, 0.698039)
-theme_override_colors/font_pressed_color = Color(0.458824, 0.458824, 0.458824, 0.376471)
-theme_override_fonts/font = ExtResource("3_ey1tb")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxFlat_gqxqw")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_gqxqw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gqxqw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gqxqw")
-theme_override_styles/normal = SubResource("StyleBoxFlat_gqxqw")
-text = "SFX: ON"
 
 [node name="QuitButton" type="Button" parent="FramePanel/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(1080, 200)
