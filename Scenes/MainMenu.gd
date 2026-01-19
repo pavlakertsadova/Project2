@@ -60,10 +60,8 @@ func _on_h_slider_value_changed(value):
 		AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
-	print("Fullscreen toggled:", toggled_on)
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-		print(DisplayServer.window_get_mode())
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		
