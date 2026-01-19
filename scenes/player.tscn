@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://dxfe3v6h758r0"]
 
-[ext_resource type="Script" uid="uid://7q4a4anb62fc" path="res://Script/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://7q4a4anb62fc" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://7sumhxkp6qo" path="res://Assets/Screenshot_2026-1-18_122515949.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bhwt1kiot67a3" path="res://Assets/elements-supremacy-spritesheets/spaghetti_atlas.png" id="2_qhqgy"]
 

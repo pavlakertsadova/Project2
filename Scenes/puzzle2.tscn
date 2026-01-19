@@ -1,16 +1,16 @@
 [gd_scene load_steps=29 format=4 uid="uid://v8j1bfp7kate"]
 
-[ext_resource type="Script" uid="uid://e51vavaulq2v" path="res://Script/puzzle_2.gd" id="1_3lbq2"]
+[ext_resource type="Script" uid="uid://e51vavaulq2v" path="res://script/puzzle_2.gd" id="1_3lbq2"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="2_p66xg"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_883m3"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="4_7cckq"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="5_i1xga"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="6_0fl48"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_7jgaq"]
-[ext_resource type="Script" uid="uid://108d48snew40" path="res://Scenes/chest_trigger.gd" id="8_883m3"]
-[ext_resource type="Script" uid="uid://b2smepf03ud8c" path="res://Scenes/bench_trigger.gd" id="9_7cckq"]
-[ext_resource type="Script" uid="uid://co2gluuqgnncn" path="res://Scenes/barrel_trigger.gd" id="10_i1xga"]
-[ext_resource type="Script" uid="uid://dstjqkjulhdlu" path="res://Scenes/vase_trigger.gd" id="11_0fl48"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_7jgaq"]
+[ext_resource type="Script" uid="uid://108d48snew40" path="res://scenes/chest_trigger.gd" id="8_883m3"]
+[ext_resource type="Script" uid="uid://b2smepf03ud8c" path="res://scenes/bench_trigger.gd" id="9_7cckq"]
+[ext_resource type="Script" uid="uid://co2gluuqgnncn" path="res://scenes/barrel_trigger.gd" id="10_i1xga"]
+[ext_resource type="Script" uid="uid://dstjqkjulhdlu" path="res://scenes/vase_trigger.gd" id="11_0fl48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p248n"]
 texture = ExtResource("2_p66xg")
@@ -875,7 +875,9 @@ sources/0 = SubResource("TileSetAtlasSource_206hb")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8jitk"]
 texture = ExtResource("6_0fl48")
 14:0/0 = 0
+14:0/0/y_sort_origin = 17
 15:0/0 = 0
+15:0/0/y_sort_origin = 17
 24:0/0 = 0
 25:0/0 = 0
 2:1/0 = 0
@@ -885,9 +887,15 @@ texture = ExtResource("6_0fl48")
 10:1/0 = 0
 11:1/0 = 0
 14:1/0 = 0
+14:1/0/y_sort_origin = 17
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:1/0 = 0
+15:1/0/y_sort_origin = 17
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:1/0 = 0
+16:1/0/y_sort_origin = 17
 17:1/0 = 0
+17:1/0/y_sort_origin = 17
 18:1/0 = 0
 19:1/0 = 0
 20:1/0 = 0
@@ -903,9 +911,15 @@ texture = ExtResource("6_0fl48")
 10:2/0 = 0
 11:2/0 = 0
 14:2/0 = 0
+14:2/0/y_sort_origin = -13
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:2/0 = 0
+15:2/0/y_sort_origin = -13
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:2/0 = 0
+16:2/0/y_sort_origin = 17
 17:2/0 = 0
+17:2/0/y_sort_origin = 17
 18:2/0 = 0
 19:2/0 = 0
 20:2/0 = 0
@@ -921,9 +935,15 @@ texture = ExtResource("6_0fl48")
 10:3/0 = 0
 11:3/0 = 0
 14:3/0 = 0
+14:3/0/y_sort_origin = -6
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:3/0 = 0
+15:3/0/y_sort_origin = -6
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:3/0 = 0
+16:3/0/y_sort_origin = 17
 17:3/0 = 0
+17:3/0/y_sort_origin = 17
 18:3/0 = 0
 19:3/0 = 0
 20:3/0 = 0
@@ -1229,6 +1249,7 @@ texture = ExtResource("6_0fl48")
 19:31/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4uiwl"]
+physics_layer_0/collision_layer = 6
 sources/0 = SubResource("TileSetAtlasSource_8jitk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvpun"]
@@ -1484,7 +1505,7 @@ outline_size = 4
 outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p66xg"]
-size = Vector2(24.5, 49.5)
+size = Vector2(34.75, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cckq"]
 size = Vector2(57, 41)
@@ -1856,7 +1877,7 @@ texture = ExtResource("6_0fl48")
 sources/0 = SubResource("TileSetAtlasSource_0fl48")
 
 [node name="puzzle2" type="Node2D"]
-position = Vector2(29, 15)
+position = Vector2(1141, 316)
 script = ExtResource("1_3lbq2")
 
 [node name="grass" type="TileMapLayer" parent="."]
@@ -1882,6 +1903,7 @@ tile_map_data = PackedByteArray("AAAWAP//AAASAAQAAAAWAAAAAAASAAUAAAAWAAEAAAASAAY
 tile_set = SubResource("TileSet_ufuhr")
 
 [node name="player" parent="." instance=ExtResource("7_7jgaq")]
+z_index = 1
 position = Vector2(-119, -54)
 scale = Vector2(0.679999, 0.68)
 
@@ -1889,6 +1911,7 @@ scale = Vector2(0.679999, 0.68)
 zoom = Vector2(3, 3)
 
 [node name="taskLabel1" type="Label" parent="player"]
+z_index = 1
 custom_minimum_size = Vector2(300, 0)
 offset_left = -141.0
 offset_top = -115.0
@@ -1902,7 +1925,7 @@ autowrap_mode = 2
 script = ExtResource("8_883m3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chestTrigger"]
-position = Vector2(240.25, 135.75)
+position = Vector2(238.375, 137)
 shape = SubResource("RectangleShape2D_p66xg")
 
 [node name="benchTrigger" type="Area2D" parent="."]

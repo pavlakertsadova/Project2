@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dj0wy0td4mkla" path="res://Assets/nail.png" id="8_6ywl8"]
 [ext_resource type="Texture2D" uid="uid://bs3c3p6uulxaf" path="res://Assets/cube.png" id="9_rsg3k"]
 [ext_resource type="Script" uid="uid://bnb7y6fjsjyhb" path="res://puzzle7_script/exit.gd" id="10_ierpt"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="11_7q1si"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="11_7q1si"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="13_duobs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nxem"]

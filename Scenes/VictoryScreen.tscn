@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bvsfm8vxvkj10"]
 
 [ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_2n4xq"]
-[ext_resource type="Script" uid="uid://d2pisytj8rv8n" path="res://Scenes/victory_screen.gd" id="1_8kq2x"]
+[ext_resource type="Script" uid="uid://d2pisytj8rv8n" path="res://scenes/victory_screen.gd" id="1_8kq2x"]
 [ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="2_rc3hl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2n4xq"]

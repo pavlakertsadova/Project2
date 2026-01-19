@@ -4,6 +4,8 @@ extends Control
 @onready var menu_buttons = $VBoxContainer  # Контейнерът с Start/Exit
 @onready var settings_menu = $SettingsMenu  # Панелът с настройките
 
+
+
 func _ready():
 	# Уверяваме се, че при старт настройките са скрити
 	settings_menu.visible = false
@@ -12,10 +14,11 @@ func _ready():
 	# Уверяваме се, че при старт настройките са скрити
 	settings_menu.visible = false
 	var title = $Label
+	title.add_theme_font_size_override("font_size", 36)
 	title.pivot_offset = title.size / 2
 	var tween = create_tween().set_loops()
-	tween.tween_property(title, "scale", Vector2(1.05, 1.05), 1.0).set_trans(Tween.TRANS_SINE)
-	tween.tween_property(title, "scale", Vector2(1.0, 1.0), 1.0).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(title, "scale", Vector2(1.02, 1.02), 1.0).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(title, "scale", Vector2(1, 1), 1.0).set_trans(Tween.TRANS_SINE)
 	menu_buttons.visible = true
 	var current_mode = DisplayServer.window_get_mode()
 	if current_mode == DisplayServer.WINDOW_MODE_FULLSCREEN:
@@ -35,12 +38,15 @@ func _on_settings_button_pressed():
 	# Скриваме главното меню, показваме настройките
 	menu_buttons.visible = false
 	settings_menu.visible = true
+	var title = $Label
+	title.visible = false
 
 func _on_back_button_pressed():
 	# Обратното
 	menu_buttons.visible = true
 	settings_menu.visible = false
-
+	var title = $Label
+	title.visible = true
 
 func _on_h_slider_value_changed(value):
 	var bus_index = AudioServer.get_bus_index("Master")

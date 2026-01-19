@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="4_npjcu"]
 [ext_resource type="Texture2D" uid="uid://dujoul3a3et2f" path="res://Assets/lever.png" id="5_npjcu"]
 [ext_resource type="FontFile" uid="uid://js78wjypxcro" path="res://Assets/fonts/PixelOperator8.ttf" id="7_npjcu"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="7_owr0o"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="7_owr0o"]
 [ext_resource type="Texture2D" uid="uid://demmybqs8hxgk" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Player.png" id="7_pbb64"]
 [ext_resource type="Script" uid="uid://cr1cey3fj8a5r" path="res://puzzle8_script/chest.gd" id="11_b4t1s"]
 [ext_resource type="AudioStream" uid="uid://cw00jo0wr411n" path="res://Audio/lever_pull.mp3" id="11_irkub"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ngupgxmm6gh3"]
 
-[ext_resource type="Script" uid="uid://bwus7deh3k6dr" path="res://Scenes/credits.gd" id="1_7xmno"]
+[ext_resource type="Script" uid="uid://bwus7deh3k6dr" path="res://scenes/credits.gd" id="1_7xmno"]
 [ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_xbebw"]
 [ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="2_7xmno"]
 
@@ -41,8 +41,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 36.0
+offset_right = -4.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.02602, 0.935835)
 script = ExtResource("1_7xmno")
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="2_rxnbo"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="3_es7c7"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="4_kksrv"]
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="5_1mg6p"]
-[ext_resource type="Script" uid="uid://cy4n47u02d5kg" path="res://Scenes/gravetrigger.gd" id="6_rxnbo"]
-[ext_resource type="Script" uid="uid://epif5fcxia5p" path="res://Scenes/answer_stone.gd" id="7_es7c7"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="5_1mg6p"]
+[ext_resource type="Script" uid="uid://cy4n47u02d5kg" path="res://scenes/gravetrigger.gd" id="6_rxnbo"]
+[ext_resource type="Script" uid="uid://epif5fcxia5p" path="res://scenes/answer_stone.gd" id="7_es7c7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jawmp"]
 texture = ExtResource("1_25abc")
@@ -1496,7 +1496,8 @@ tile_map_data = PackedByteArray("AAAHAAYAAAAKAB4AAAAHAAcAAAAKAB8AAAAIAAYAAAALAB4
 tile_set = SubResource("TileSet_fij8s")
 
 [node name="player" parent="." instance=ExtResource("5_1mg6p")]
-z_index = 6
+z_index = 1
+y_sort_enabled = false
 position = Vector2(30, 110)
 collision_mask = 3
 
@@ -1521,13 +1522,12 @@ collision_mask = 3
 script = ExtResource("6_rxnbo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gravetrigger"]
-z_index = 6
 position = Vector2(474, 314)
 rotation = 1.56289
 shape = SubResource("RectangleShape2D_es7c7")
 
 [node name="Label" type="Label" parent="gravetrigger"]
-z_index = 6
+z_index = 4
 offset_right = 40.0
 offset_bottom = 23.0
 
