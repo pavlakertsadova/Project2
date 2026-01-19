@@ -115,7 +115,6 @@ text = "SETTINGS"
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-mouse_filter = 2
 theme_override_styles/hover = SubResource("StyleBoxFlat_8saeu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cmrfp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_koqhg")
