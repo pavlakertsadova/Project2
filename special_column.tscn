@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3gm2ud1qjrpo"]
 
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="1_cilxi"]
-[ext_resource type="Script" uid="uid://c5ixcpf74d3ra" path="res://scenes/special_column.gd" id="2_hvnsu"]
+[ext_resource type="Script" uid="uid://c5ixcpf74d3ra" path="res://Scenes/special_column.gd" id="2_hvnsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wo1r"]
 size = Vector2(31.3334, 76)

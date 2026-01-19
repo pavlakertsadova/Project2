@@ -1,30 +1,30 @@
 [gd_scene load_steps=57 format=4 uid="uid://bh7nudw6bjfgl"]
 
-[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://scenes/player.tscn" id="1_4d7sh"]
-[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://scenes/node_2d.gd" id="1_he4j0"]
-[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://scenes/`door_2.gd" id="1_p20hg"]
+[ext_resource type="PackedScene" uid="uid://dxfe3v6h758r0" path="res://Scenes/player.tscn" id="1_4d7sh"]
+[ext_resource type="Script" uid="uid://daayqunmv4d0t" path="res://Scenes/node_2d.gd" id="1_he4j0"]
+[ext_resource type="Script" uid="uid://basihvhuf6q37" path="res://Scenes/`door_2.gd" id="1_p20hg"]
 [ext_resource type="Texture2D" uid="uid://bfrwse34rdvs4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Grass.png" id="1_v7gqg"]
 [ext_resource type="Texture2D" uid="uid://bp7b1hou08nlw" path="res://Assets/TX Props with Shadow.png" id="2_85gyg"]
 [ext_resource type="Texture2D" uid="uid://dde47gxl708i4" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Struct.png" id="2_chwn1"]
 [ext_resource type="Texture2D" uid="uid://c82wv5n1sa0ka" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Stone Ground.png" id="3_hvaui"]
 [ext_resource type="Texture2D" uid="uid://d2mbhi35uaul2" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Tileset Wall.png" id="4_2ooml"]
-[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://scenes/door_3.gd" id="4_fg7i4"]
+[ext_resource type="Script" uid="uid://k6hxcafdjt4r" path="res://Scenes/door_3.gd" id="4_fg7i4"]
 [ext_resource type="Texture2D" uid="uid://crpj7sa370kvp" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Props.png" id="5_p20hg"]
 [ext_resource type="Texture2D" uid="uid://b0eef2auba37w" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow.png" id="6_he4j0"]
 [ext_resource type="Texture2D" uid="uid://bdv0m6vn3j3ws" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Shadow Plant.png" id="7_85gyg"]
 [ext_resource type="Texture2D" uid="uid://bghr4quojylrh" path="res://Assets/Pixel Art Top Down - Basic v1-2/Texture/TX Plant.png" id="8_c32x4"]
-[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://scenes/enemy.tscn" id="10_hvaui"]
-[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://script/door.gd" id="10_p20hg"]
+[ext_resource type="PackedScene" uid="uid://crh8iwq2ldlml" path="res://Scenes/enemy.tscn" id="10_hvaui"]
+[ext_resource type="Script" uid="uid://dttgdo3jmgaaf" path="res://Script/door.gd" id="10_p20hg"]
 [ext_resource type="AudioStream" uid="uid://c8yubi7eymuar" path="res://Audio/door_unlock.mp3" id="14_pblkq"]
-[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://scenes/GameManager.tscn" id="15_c32x4"]
-[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://scenes/door_4.gd" id="17_gwne5"]
-[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://scenes/door_5.gd" id="18_hpu6p"]
-[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://scenes/door_6.gd" id="19_op2xg"]
-[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://scenes/door_7.gd" id="20_1nvmp"]
-[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://scenes/door_8.gd" id="21_el1jj"]
-[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://scenes/door_9.gd" id="22_03fgm"]
-[ext_resource type="PackedScene" uid="uid://cqrm6abhwsr6f" path="res://scenes/PauseMenu.tscn" id="23_uu23e"]
-[ext_resource type="Script" uid="uid://ps7ujq7judhk" path="res://scenes/minimap.gd" id="24_2sxpt"]
+[ext_resource type="PackedScene" uid="uid://co46f6tit4ajp" path="res://Scenes/GameManager.tscn" id="15_c32x4"]
+[ext_resource type="Script" uid="uid://blcae8cjgpa3s" path="res://Scenes/door_4.gd" id="17_gwne5"]
+[ext_resource type="Script" uid="uid://crpet6brfkm0k" path="res://Scenes/door_5.gd" id="18_hpu6p"]
+[ext_resource type="Script" uid="uid://c6yj6itn7lueu" path="res://Scenes/door_6.gd" id="19_op2xg"]
+[ext_resource type="Script" uid="uid://xj281jmw31th" path="res://Scenes/door_7.gd" id="20_1nvmp"]
+[ext_resource type="Script" uid="uid://dnb0cyawx2bed" path="res://Scenes/door_8.gd" id="21_el1jj"]
+[ext_resource type="Script" uid="uid://bqy3d8uqr5m28" path="res://Scenes/door_9.gd" id="22_03fgm"]
+[ext_resource type="PackedScene" uid="uid://cqrm6abhwsr6f" path="res://Scenes/PauseMenu.tscn" id="23_uu23e"]
+[ext_resource type="Script" uid="uid://ps7ujq7judhk" path="res://Scenes/minimap.gd" id="24_2sxpt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2bti"]
 texture = ExtResource("5_p20hg")
@@ -513,9 +513,13 @@ texture = ExtResource("5_p20hg")
 0:30/0 = 0
 1:30/0 = 0
 2:30/0 = 0
+2:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.6305, 4.89867, 4.20058, 2.96626, 8, 2.84548, 8, 8, 3.83826, 8)
 3:30/0 = 0
+3:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 2.84548, -4.3745, 2.36238, -3.04596, 3.93246, -1.23433, 8)
 4:30/0 = 0
+4:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.83821, 4.29479, 1.85776, -0.0435257, 8, -0.933826, 8, 8, -3.52907, 8)
 5:30/0 = 0
+5:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -7.14417, 0.747852, -0.496588, 3.39897, 2.74806, 7.1778, -8, 8)
 6:30/0 = 0
 6:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.51802, 1.79859, 8, -3.59718, 6.47491, 8, -4.67633, 8)
 7:30/0 = 0
@@ -537,9 +541,13 @@ texture = ExtResource("5_p20hg")
 0:31/0 = 0
 1:31/0 = 0
 2:31/0 = 0
+2:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.939638, -4.52185, 0.0942078, -8, 8, -8, 8, -1.01935, 3.35515, -1.744)
 3:31/0 = 0
+3:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.01935, -8, -8, 0.0942078, -8, -0.630447, -4.52185, -2.80441, -2.22711)
 4:31/0 = 0
+4:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.388897, -1.744, -3.04596, -8, 8, -8, 8, 1.27539, 3.83826, -0.536243)
 5:31/0 = 0
+5:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.51694, -8, -8, 3.95903, -8, 1.42274, -1.98555, -0.992775, 0.429962)
 6:31/0 = 0
 6:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.87774, -8, 8, -8, 8, 1.97845, -3.23746, 0)
 7:31/0 = 0
@@ -3109,10 +3117,9 @@ region_rect = Rect2(23, 162, 50, 62)
 shape = SubResource("CapsuleShape2D_fg7i4")
 
 [node name="openDoor4" type="Sprite2D" parent="openDoors"]
-visible = false
 z_index = 7
-position = Vector2(288, 1711.5)
-scale = Vector2(1.48, 1.46774)
+position = Vector2(291, 1711.5)
+scale = Vector2(1.6, 1.46774)
 texture = ExtResource("2_85gyg")
 region_enabled = true
 region_rect = Rect2(23, 162, 50, 62)
@@ -3266,8 +3273,8 @@ shape = SubResource("CapsuleShape2D_gwne5")
 
 [node name="door4" type="Sprite2D" parent="closedDoors"]
 z_index = 6
-position = Vector2(286, 1710)
-scale = Vector2(1.4333, 1.59521)
+position = Vector2(286.567, 1710)
+scale = Vector2(1.45103, 1.59521)
 texture = ExtResource("5_p20hg")
 region_enabled = true
 region_rect = Rect2(14.398, 96.444, 64.5, 63.092)

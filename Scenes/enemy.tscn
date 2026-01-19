@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://crh8iwq2ldlml"]
 
-[ext_resource type="Script" uid="uid://cvajp1fifano4" path="res://script/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://cvajp1fifano4" path="res://Script/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://btr5bwkeg625j" path="res://Assets/Screenshot_2026-1-18_16311587.png" id="2_md0e3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]

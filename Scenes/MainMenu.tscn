@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dywkfuf3vmenm"]
 
-[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://scenes/MainMenu.gd" id="1_853f1"]
+[ext_resource type="Script" uid="uid://blhj6b353j4od" path="res://Scenes/MainMenu.gd" id="1_853f1"]
 [ext_resource type="Texture2D" uid="uid://cokoj1k0iretu" path="res://Assets/Pixel Art Top Down - Basic v1-2/Scene Overview.png" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://b1jx8trw2pv2h" path="res://Assets/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="3_8saeu"]
 
